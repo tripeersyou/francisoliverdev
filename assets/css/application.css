@@ -1,0 +1,124 @@
+html {
+    /* height: 100%; */
+
+    --bg: #fcfcfc;
+    --bg-panel: #fbfbfb;
+    --color-headings: #0077ff;
+    --color-text: #333333;
+    --theme-icon: #333333;
+}
+
+html[data-theme='dark'] {
+    /* height: 100%; */
+
+    --bg: #333333;
+    --bg-panel: #434343;
+    --color-headings: #3694ff;
+    --color-text: #b5b5b5;
+    --theme-icon: #3694ff;
+    --active-color: white;
+}
+
+.ui.bottom.menu{
+    background-color: var(--bg-panel);
+}
+.ui.top.menu{
+    background-color: var(--bg-panel);
+}
+
+.theme-icon {
+    color: var(--theme-icon) !important;
+}
+
+.theme-icon:hover {
+    cursor: pointer;
+}
+
+
+.menu-icon{
+    cursor: pointer;
+    padding-top: 7px;
+    padding-left: 7px;
+}
+
+.menu-icon:hover{
+    cursor: pointer;
+}
+
+.bars.icon:hover{
+    cursor: pointer;
+}
+
+.content {
+    padding-bottom: 65px;
+}
+body, .sidebar, .pusher{
+    background-color: var(--bg) !important;
+}
+
+.dimmed, .ui.segment, .pagination.menu {
+    background-color: var(--bg-panel) !important;
+}
+
+.active.item{
+    color: var(--active-color) !important;
+}
+
+h1, h2, h3, div.header{
+    color: var(--color-headings) !important;
+}
+
+p, i, small, .active.section, div.meta, strong, label, a.item, span.item {
+    color: var(--color-text) !important;
+}
+
+
+h1.post-title {
+    margin-bottom: 0px;
+}
+
+h1.title {
+    text-align: center
+}
+
+.right-home-grid, .right-home-grid > img {
+    display: inline !important;
+    text-align: center;
+}
+
+.buttons-container {
+    text-align: center;
+}
+
+.ui.blue.button{
+    background-color: skyblue !important;
+}
+.ui.blue.inverted.button{
+    background-color: transparent!important;
+}
+
+.ui.blue.inverted.button:hover{
+    background-color: skyblue !important;
+}
+
+.ui.blue.button.item{
+    background-color: transparent!important;
+}
+
+.buttons-container  i {
+    color: white !important;
+    margin: 0px !important;
+}
+
+.resume {
+    height: 100vh;
+    width: 100%;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+    transition: all 750ms !important;
+    transition-delay: 0 !important;
+}

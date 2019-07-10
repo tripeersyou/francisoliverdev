@@ -1,0 +1,56 @@
+---
+title: Francis - Blog Commits
+layout: page
+permalink: '/blog/'
+pagination:
+  enabled: true
+---
+<div class="ui breadcrumb">
+    <a href="/" class="section">Home</a>
+    <i class="right angle icon divider"></i>
+    <div class="active section">Blog</div>
+</div>
+
+<h1 class="post-title">Blog Commits</h1>
+<p class="subtitle">Blog posts regarding my life in tech, work and personal wins in life.</p>
+{% for post in paginator.posts %}
+    <div class="ui raised segment">
+        <h3 class="header">{{post.title}}</h3>
+        <div class="meta">
+            <strong>Date:</strong> {{post.date | date_to_string}}
+        </div>
+        <div class="description">
+            <p>{{post.excerpt}}</p>
+        </div>
+        <div class="extra">
+            <a href="{{post.url}}" class="ui button">View Post</a>
+        </div>
+    </div>
+{% endfor %}
+
+
+{% if paginator.total_pages > 1 %}
+<div class="ui pagination menu">
+  {% if paginator.previous_page %}
+    <a class="item" href="{{ paginator.previous_page_path | relative_url }}"><i class="angle left icon"></i>Prev</a>
+  {% else %}
+    <span class="item">&laquo; Prev</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <em class="active item">{{ page }}</em>
+    {% elsif page == 1 %}
+      <a class="item" href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a>
+    {% else %}
+      <a class="item" href="{{ site.paginate_path }}/{{page}}/">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a class="item" href="{{ paginator.next_page_path | relative_url }}">Next <i class="angle right icon"></i></a>
+  {% else %}
+    <span class=" item">Next &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}

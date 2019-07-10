@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div class="ui breadcrumb">
+    <a href="/" class="section">Home</a>
+    <i class="right angle icon divider"></i>
+    <a href="/blog/" class="section">Blog</a>
+    <i class="right angle icon divider"></i>
+    <div class="active section">{{page.title}}</div>
+</div>
+
+<h1 class="post-title">{{page.title}}</h1>
+<small>{{page.date | date_to_string}}</small>
+<hr>
+{{content}}
