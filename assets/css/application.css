@@ -35,7 +35,7 @@ html[data-theme='dark'] {
 }
 
 
-.menu-icon{
+.menu-item{
     cursor: pointer;
     padding-top: 7px;
     padding-left: 7px;
