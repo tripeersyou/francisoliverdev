@@ -7,29 +7,29 @@ author: "Francis Avancena"
 
 Using native CSS variables and JavaScript we are going to implement a full blown toggled dark mode or dark theme in our Jekyll websites. First we must first define our CSS variables for our light theme. In CSS we define a variable by having two dashes prefixing the variable name like in the code example below.
 
-{% highlight css %}
+```css 
 html {
     --bg: #fcfcfc;
     --bg-panel: #fbfbfb;
     --color-headings: #0077ff;
     --color-text: #333333;
 }
-{% endhighlight %}
+```
 
 We can see that we have four CSS variables namely `--bg`, `--bg-panel`, `--color-headings` and `--color-text`. Once we have all our CSS variables set up for the light theme we create another set for the dark theme retaining the variable names but appending it to the `html` element with the `data-theme='dark'` attribute like in the code below:
 
-{% highlight css %}
+```css 
 html[data-theme='dark'] {
     --bg: #333333;
     --bg-panel: #434343;
     --color-headings: #3694ff;
     --color-text: #b5b5b5;
 }
-{% endhighlight %}
+```
 
 With those two steps out of the way we need only need to assign the CSS variables to the different HTML components.
 
-{% highlight css %}
+```css 
 
 body {
     background-color: var(--bg);
@@ -46,11 +46,11 @@ h1, h2, h3, h4, h5, h6 {
 p, strong, b, em, span, code, small {
     color: var(--color-text);
 }
-{% endhighlight %}
+```
 
 Now in your **main HTML layout file** to check whether your dark mode works add the attribute `data-theme='dark'` to the `html` element.
 
-{% highlight html %}
+```html 
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
@@ -65,17 +65,17 @@ Now in your **main HTML layout file** to check whether your dark mode works add 
     <!-- Jekyll Template -->
 </body>
 </html>
-{% endhighlight %}
+```
 
 For now we leave the site in it's light mode set the `data-theme` attribute back to `light`. Now we must create a button to toggle between both modes and it give the class `theme-toggle` to be able to select it using JavaScript.
 
-{% highlight html %}
+```html 
 <button class="theme-toggle">Toggle Dark Mode</button>
-{% endhighlight %}
+```
 
 We will next write the JavaScript for the desired behavior of when clicking the button it must toggle between our two themes using native JavaScript we write.
 
-{% highlight js %}
+```js 
 document.addEventListener('DOMContentLoaded', themeChange);
 
 function themeChange(){
@@ -104,11 +104,11 @@ function themeChange(){
         }, 1000);
     }
 }
-{% endhighlight %}
+```
 
 Going back to our CSS file to add the CSS transition we add the following code below at the end of your CSS file.
 
-{% highlight css %}
+```css 
 html.transition,
 html.transition *,
 html.transition *:before,
@@ -116,7 +116,7 @@ html.transition *:after {
     transition: all 650ms !important;
     transition-delay: 0 !important;
 }
-{% endhighlight %}
+```
 
 If you are using a single page application like React.js, Angular or Vue. This implementation works fine as you navigate the web app but for Jekyll in which the files are built into the `_sites` folder and technically has multiple HTML pages and files when deployed, the dark mode is immediately lost when we move from one HTML file to another. To remedy this we go to one special library known to Ruby Developers: **turbolinks.js**. Known for being shipped with the Ruby on Rails Framework it's main implementation and the fundamentals of how turbolinks works is the solution on retaining the dark theme while navigating through our Jekyll site.
 
@@ -124,7 +124,7 @@ Turbolinks works by intercepting anchor tags or the `<a>` tags in your site and 
 
 We only need to add the turbolinks js library via CDN or locally through `npm` and add it to our header in the default HTML layout.
 
-{% highlight html %}
+```html 
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -140,11 +140,10 @@ We only need to add the turbolinks js library via CDN or locally through `npm` a
     <!-- Jekyll Template -->
 </body>
 </html>
-{% endhighlight %}
+```
 
 In adding turbolinks we have to edit our JavaScript file since we said that we want the code to run when `'DOMContentLoaded'` event has been triggered but due to turbolinks when we navigate our pages this event does not trigger thus leaving our code unable to execute. We must change the event handler to a turbolinks event namely the `'turbolinks:load'` event provided in the turbolinks documentation. Now our JavaScript file should look like the example below.
-
-{% highlight js%}
+``` js
 document.addEventListener('turbolinks:load', themeChange);
 
 function themeChange(){
@@ -173,7 +172,7 @@ function themeChange(){
         }, 1000);
     }
 }
-{% endhighlight %}
+```
 
 This enables our JavaScript files to execute when clicking our button toggler and to navigate without losing our chosen theme in the site. Remember that this only works in one session of navigating through the site, meaning that if another tab is created with the same site the default light theme will be shown, and if you visit the site again in the future it will revert back to the default theme.
 
