@@ -14,18 +14,38 @@ pagination:
 <h1 class="post-title">Blog Commits</h1>
 <p class="subtitle">Blog posts regarding my life in tech, work and personal wins in life.</p>
 {% for post in paginator.posts %}
-    <div class="ui raised segment">
-        <h3 class="header">{{post.title}}</h3>
-        <div class="meta">
-            <strong>Date:</strong> {{post.date | date_to_string}}
+  <div class="ui raised segment">
+      {% if post.cover_image != nil %}
+      <div class="ui stackable grid">
+        <div class="four wide column ">
+            <img class="ui rounded centered image" alt="{{post.title}}'s Cover Image" src="{{post.cover_image}}">
         </div>
-        <div class="description">
-            <p>{{post.excerpt}}</p>
+        <div class="twelve wide column">
+            <h3 class="header">{{post.title}}</h3>
+            <div class="meta">
+                <strong>Date:</strong> {{post.date | date_to_string}}
+            </div>
+            <div class="description">
+                <p>{{post.excerpt}}</p>
+            </div>
+            <div class="extra">
+                <a href="{{post.url}}" class="ui button">View Post</a>
+            </div>
         </div>
-        <div class="extra">
-            <a href="{{post.url}}" class="ui button">View Post</a>
-        </div>
-    </div>
+      </div>
+      {% else %}
+      <h3 class="header">{{post.title}}</h3>
+      <div class="meta">
+          <strong>Date:</strong> {{post.date | date_to_string}}
+      </div>
+      <div class="description">
+          <p>{{post.excerpt}}</p>
+      </div>
+      <div class="extra">
+          <a href="{{post.url}}" class="ui button">View Post</a>
+      </div>
+      {% endif %}
+  </div>
 {% endfor %}
 
 

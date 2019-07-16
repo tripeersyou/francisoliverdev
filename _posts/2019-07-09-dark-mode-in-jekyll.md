@@ -3,6 +3,8 @@ layout: post
 title: "Implementing Dark Mode to Your Jekyll Site"
 date: 2019-07-08
 author: "Francis Avancena"
+tags: jekyll, ruby, css, javascript
+cover_image:
 ---
 
 Using native CSS variables and JavaScript we are going to implement a full blown toggled dark mode or dark theme in our Jekyll websites. First we must first define our CSS variables for our light theme. In CSS we define a variable by having two dashes prefixing the variable name like in the code example below.
