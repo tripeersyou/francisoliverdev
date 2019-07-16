@@ -7,6 +7,7 @@ author: "Francis Avancena"
 
 Using native CSS variables and JavaScript we are going to implement a full blown toggled dark mode or dark theme in our Jekyll websites. First we must first define our CSS variables for our light theme. In CSS we define a variable by having two dashes prefixing the variable name like in the code example below.
 
+
 ```css 
 html {
     --bg: #fcfcfc;
@@ -95,8 +96,7 @@ function themeChange(){
         }
     });
 
-    // This function adds the 'transition' class to the HTML element and removes it after 1 second 
-    // allowing us to do some CSS transitions for a smother change between the two themes.
+    // Adds the 'transition' class to <html> for CSS fun
     let transition = () =>{
         document.documentElement.classList.add('transition');
         window.setTimeout(()=>{
@@ -163,8 +163,7 @@ function themeChange(){
         }
     });
 
-    // This function adds the 'transition' class to the HTML element and removes it after 1 second 
-    // allowing us to do some CSS transitions for a smother change between the two themes.
+    // Adds the 'transition' class to <html> for CSS fun
     let transition = () =>{
         document.documentElement.classList.add('transition');
         window.setTimeout(()=>{
