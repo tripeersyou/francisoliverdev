@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date: 2019-07-01
-author: "Francis Avancena"
+author: "Francis Avanceña"
 tags: jekyll, ruby, liquid
 cover_image: 
 ---
