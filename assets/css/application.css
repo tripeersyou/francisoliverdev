@@ -34,6 +34,9 @@ html[data-theme='dark'] {
     cursor: pointer;
 }
 
+.highlight {
+    overflow-y: scroll !important;
+}
 
 .menu-item{
     cursor: pointer;

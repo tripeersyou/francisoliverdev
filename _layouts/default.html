@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.0/css/all.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" integrity="sha256-iM4Yzi/zLj/IshPWMC1IluRxTtRjMqjPGd97TZ9yYpU=" crossorigin="anonymous" charset="utf-8"></script>
     <script src="/assets/js/application.js"></script>
     <link rel="stylesheet" href="/assets/css/application.css">
     <link rel="stylesheet" href="/assets/css/syntax.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
     <title>{{page.title}}</title>
 </head>
 <body>
@@ -27,6 +29,9 @@
         {% if page.title != 'Francis Oliver Avanceña'%}
             {% include footer.html %}
         {% endif %}
+        <script>
+            new WOW().init();
+        </script>
     </div>
 </body>
 </html>
