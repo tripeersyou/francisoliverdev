@@ -26,6 +26,7 @@ html[data-theme='dark'] {
     background-color: var(--bg-panel);
 }
 
+
 .theme-icon {
     color: var(--theme-icon) !important;
 }

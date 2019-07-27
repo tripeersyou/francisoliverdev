@@ -7,26 +7,28 @@ tags: jekyll, ruby, css, javascript
 cover_image:
 ---
 
+<a href="https://jekyllrb.com" target="_blank">Jekyll</a> is a static site generator powered by Ruby, that can use both HTML and Markdown for Markup and Liquid as a template engine. It's the technology that powers this site! And with the prevalence in web development of now having both a light and a dark theme, we will implement having this functionality in Jekyll sites.
+
 Using native CSS variables and JavaScript we are going to implement a full blown toggled dark mode or dark theme in our Jekyll websites. First we must first define our CSS variables for our light theme. In CSS we define a variable by having two dashes prefixing the variable name like in the code example below.
 
 
 ```css 
 html {
     --bg: #fcfcfc;
-    --bg-panel: #fbfbfb;
-    --color-headings: #0077ff;
-    --color-text: #333333;
+    --bg-secondary: #fbfbfb;
+    --headings: #0077ff;
+    --text: #333333;
 }
 ```
 
-We can see that we have four CSS variables namely `--bg`, `--bg-panel`, `--color-headings` and `--color-text`. Once we have all our CSS variables set up for the light theme we create another set for the dark theme retaining the variable names but appending it to the `html` element with the `data-theme='dark'` attribute like in the code below:
+We can see that we have four CSS variables namely `--bg`, `--bg-secondary`, `--headings` and `--text`. Once we have all our CSS variables set up for the light theme we create another set for the dark theme retaining the variable names but appending it to the `html` element with the `data-theme='dark'` attribute like in the code below:
 
 ```css 
 html[data-theme='dark'] {
     --bg: #333333;
-    --bg-panel: #434343;
-    --color-headings: #3694ff;
-    --color-text: #b5b5b5;
+    --bg-secondary: #434343;
+    --headings: #3694ff;
+    --text: #b5b5b5;
 }
 ```
 
@@ -39,15 +41,15 @@ body {
 }
 
 .container {
-    background-color: var(--bg-panel);
+    background-color: var(--bg-secondary);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--color-headings);
+    color: var(--headings);
 }
 
 p, strong, b, em, span, code, small {
-    color: var(--color-text);
+    color: var(--text);
 }
 ```
 

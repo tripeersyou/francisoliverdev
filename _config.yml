@@ -16,12 +16,25 @@
 title: Francis Oliver Avanceña
 email: foavancena@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Hello! I am Francis and a Management Information Systems professional that currently works in the Fintech Industry in the Philippines.
+  Hello! I am Francis and a Management Information Systems professional that currently works in the FinTech Industry in the Philippines.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://francisoliverdev.netlify.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://francisoliver.dev" # the base hostname & protocol for your site, e.g. http://example.com
+logo: /assets/img/avatar.png
 twitter_username: sicnarf_revilo
 github_username:  tripeersyou
 devto_username: sicnarf_revilo
+twitter:
+  username: sicnarf_revilo
+  card: summary
+social:
+  name: Francis Oliver Avanceña
+  links:
+    - https://facebook.com/sicnarfzurcrevilo
+    - https://twitter.com/sicnarf_revilo
+    - https://github.com/tripeersyou
+    - https://linkedin.com/in/francisavancena
+    - https://dev.to/sicnarf_revilo
+    - https://instagram.com/francis.avancena
 # Build settings
 paginate_path: "/blog/page"
 pagination:
@@ -33,6 +46,7 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-paginate-v2
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

@@ -3,16 +3,18 @@
  function themeChange(){
     let theme = document.querySelector('.theme-icon');
 
-    if(document.cookie.includes('data-theme=light')){
-        document.documentElement.setAttribute('data-theme', 'light');
-        document.querySelectorAll('.ui.button').forEach(function(button){
-            button.classList.remove('inverted');
-        });
-    } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        document.querySelectorAll('.ui.button').forEach(function(button){
-            button.classList.add('inverted');
-        }); 
+    if(document.cookie.includes('data-theme')){
+        if(document.cookie.includes('data-theme=light')){
+            document.documentElement.setAttribute('data-theme', 'light');
+            document.querySelectorAll('.ui.button').forEach(function(button){
+                button.classList.remove('inverted');
+            });
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.querySelectorAll('.ui.button').forEach(function(button){
+                button.classList.add('inverted');
+            }); 
+        }
     }
 
     theme.addEventListener('click',function(e){
