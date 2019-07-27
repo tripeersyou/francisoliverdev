@@ -36,7 +36,6 @@ social:
     - https://dev.to/sicnarf_revilo
     - https://instagram.com/francis.avancena
 # Build settings
-paginate_path: "/blog/page"
 pagination:
   enabled: true
   per_page: 5
@@ -47,6 +46,10 @@ plugins:
   - jekyll-feed
   - jekyll-paginate-v2
   - jekyll-seo-tag
+  - jekyll-sitemap
+
+include:
+  - _redirects
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
