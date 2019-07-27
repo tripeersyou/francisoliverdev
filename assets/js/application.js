@@ -9,7 +9,7 @@
             document.querySelectorAll('.ui.button').forEach(function(button){
                 button.classList.remove('inverted');
             });
-        } else {
+        } else if(document.cookie.include('data-theme=dark')){
             document.documentElement.setAttribute('data-theme', 'dark');
             document.querySelectorAll('.ui.button').forEach(function(button){
                 button.classList.add('inverted');
