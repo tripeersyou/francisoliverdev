@@ -14,10 +14,10 @@ Using native CSS variables and JavaScript we are going to implement a full blown
 
 ```css 
 html {
-    --bg: #fcfcfc;
-    --bg-secondary: #fbfbfb;
-    --headings: #0077ff;
-    --text: #333333;
+    --bg: #fff;
+    --bg-secondary: #fcfcfc;
+    --headings: #07f;
+    --text: #333;
 }
 ```
 
@@ -25,10 +25,10 @@ We can see that we have four CSS variables namely `--bg`, `--bg-secondary`, `--h
 
 ```css 
 html[data-theme='dark'] {
-    --bg: #333333;
-    --bg-secondary: #434343;
-    --headings: #3694ff;
-    --text: #b5b5b5;
+    --bg: #333;
+    --bg-secondary: #444;
+    --headings: #39f;
+    --text: #bbb;
 }
 ```
 
