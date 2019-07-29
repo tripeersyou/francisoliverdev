@@ -1,16 +1,15 @@
 ---
 layout: post
-title: "Implementing Dark Mode to Your Jekyll Site"
-date: 2019-07-27
-author: "Francis Avanceña"
+title: Implementing Dark Mode to Your Jekyll Site
+date: 2019-07-26 16:00:00 +0000
+author: Francis Avanceña
 tags: jekyll, ruby, css, javascript
-cover_image:
----
+cover_image: 
 
-<a href="https://jekyllrb.com" target="_blank">Jekyll</a> is a static site generator powered by Ruby, that can use both HTML and Markdown for markup and Liquid as a template engine. It's the technology that powers this site! And with the prevalence in web development of now having both a light and a dark theme, we will implement having this functionality in Jekyll sites.
+---
+<a href="https://jekyllrb.com" target="_blank">Jekyll</a>  Forestry is a static site generator powered by Ruby, that can use both HTML and Markdown for markup and Liquid as a template engine. It's the technology that powers this site! And with the prevalence in web development of now having both a light and a dark theme, we will implement having this functionality in Jekyll sites.
 
 Using native CSS variables and JavaScript we are going to implement a full blown toggled dark mode or dark theme in our Jekyll websites. First we must first define our CSS variables for our light theme. In CSS we define a variable by having two dashes prefixing the variable name like in the code example below.
-
 
 ```css 
 html {
@@ -147,6 +146,7 @@ We only need to add the turbolinks.js library via CDN or locally through `npm` a
 ```
 
 In adding turbolinks we have to edit our JavaScript file, since we said that we want the code to run when `'DOMContentLoaded'` event has been triggered but due to turbolinks when we navigate our pages this event does not trigger thus leaving our code unable to execute. We must change the event handler to a turbolinks event namely the `'turbolinks:load'` event provided in the turbolinks documentation. Now our JavaScript file should look like the example below.
+
 ``` js
 document.addEventListener('turbolinks:load', themeChange);
 
