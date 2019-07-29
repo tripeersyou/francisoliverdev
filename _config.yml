@@ -47,12 +47,6 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-admin
-
-jekyll_admin:
-  hidden_links:
-    - configuration
-    - datafiles
     
 include:
   - _redirects
