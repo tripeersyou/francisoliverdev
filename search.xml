@@ -8,5 +8,5 @@ layout: null
    <Tags>software development</Tags>
    <Contact>foavancena@gmail.com</Contact>
    <Url type="text/html" 
-        template="{{site.url}}/search?q={searchTerms}"/>
+        template="{{site.url}}/search/?q={searchTerms}"/>
  </OpenSearchDescription>
