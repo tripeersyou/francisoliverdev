@@ -4,19 +4,31 @@ hide_body: false
 fields:
 - type: text
   name: layout
-  label: layout
+  config:
+    required: true
+  label: Layout
+  default: post
 - type: text
   name: title
-  label: title
+  label: Title
+  config:
+    required: true
 - type: datetime
   name: date
-  label: date
+  label: Date
+  config:
+    required: true
+  default: now
 - type: text
   name: author
-  label: author
+  label: Author
+  default: Francis Avanceña
 - type: text
   name: tags
-  label: tags
+  label: Tags
+  default: ''
+  config:
+    required: true
 - type: text
   name: cover_image
-  label: cover_image
+  label: Cover Image
