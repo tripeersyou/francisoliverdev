@@ -42,7 +42,7 @@ pagination:
   permalink: "/page/:num/"
   title: ":title - Page :num"
 markdown: kramdown
-permalink: /blog/:title/
+permalink: "/blog/:title"
 plugins:
   - jekyll-feed
   - jekyll-paginate-v2
