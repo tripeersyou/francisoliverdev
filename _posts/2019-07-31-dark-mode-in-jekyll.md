@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Implementing Dark Mode to Your Jekyll Site
-date: 2019-07-26 16:00:00 +0000
+date: 2019-07-31
 author: Francis Avanceña
 tags: jekyll, ruby, css, javascript
 cover_image:
