@@ -4,7 +4,7 @@ title: Implementing Dark Mode to Your Jekyll Site
 date: 2019-07-08
 author: Francis Avanceña
 tags: jekyll, ruby, css, javascript
-cover_image:
+cover_image: 
 
 ---
 <a href="https://jekyllrb.com" target="_blank">Jekyll</a> is a static site generator powered by Ruby, that can use both HTML and Markdown for markup and Liquid as a template engine. It's the technology that powers this site! And with the prevalence in web development of now having both a light and a dark theme, we will implement having this functionality in Jekyll sites.
@@ -71,7 +71,7 @@ Now in your **main HTML layout file** to check whether your dark mode works add 
 </html>
 ```
 
-For now we leave the site in it's light mode set the `data-theme` attribute back to `light`. Now we must create a button to toggle between both modes and it give the class `theme-toggle` to be able to select it using JavaScript.
+For now we leave the site in its light mode set the `data-theme` attribute back to `light`. Now we must create a button to toggle between both modes and it give the class `theme-toggle` to be able to select it using JavaScript.
 
 ```html 
 <button class="theme-toggle">Toggle Dark Mode</button>
