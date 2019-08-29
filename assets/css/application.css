@@ -68,11 +68,11 @@ body, .sidebar, .pusher{
     color: var(--active-color) !important;
 }
 
-h1, h2, h3, div.header{
+h1, h2, h3, h4, div.header{
     color: var(--color-headings) !important;
 }
 
-p, i, small, .active.section, div.meta, strong, label, a.item, span.item {
+p, i, small, .active.section, div.meta, strong, label, a.item, span.item, ol, li, ul, figcaption {
     color: var(--color-text) !important;
 }
 
@@ -184,4 +184,8 @@ html.transition *:after {
   [class*="widescreen or lower hidden"] {
     display: none !important;
   }
+}
+
+figcaption {
+    text-align: center;
 }

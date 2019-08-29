@@ -12,5 +12,8 @@ permalink: '/api/posts'
         "excerpt"  : "{{ post.excerpt | escape | strip}}",
         "cover_image": "{{post.cover_image}}"
       }
+      {% if forloop.last == false %}
+      ,
+      {% endif %}
     {% endfor %}
   ]

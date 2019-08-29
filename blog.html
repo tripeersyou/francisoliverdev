@@ -26,7 +26,7 @@ pagination:
 
 <h1 class="post-title wow fadeInDown">Blog Commits</h1>
 <p class="subtitle wow fadeInDown">Blog posts regarding my life in tech, work and personal wins in life.</p>
-{% for post in paginator.posts %}
+{% for post in paginator.posts reversed %}
   <div class="ui raised segment wow slideInLeft">
       {% if post.cover_image != nil %}
       <div class="ui stackable grid">
