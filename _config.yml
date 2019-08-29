@@ -36,6 +36,7 @@ social:
     - https://dev.to/sicnarf_revilo
     - https://instagram.com/francis.avancena
 # Build settings
+future: true
 pagination:
   enabled: true
   per_page: 5
