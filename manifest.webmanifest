@@ -5,12 +5,11 @@
     "display" : "standalone",
     "start_url" : "https://francisoliver.dev/",
     "short_name" : "Francis Oliver ",
-    "theme_color" : "transparent",
     "description" : "Hello! I am Francis and a Management Information Systems professional that currently works in the FinTech Industry in the Philippines.",
     "orientation" : "any",
     "background_color" : "white",
     "theme_color": "white",
-    "prefer_related_applications" : "false",
+    "prefer_related_applications" : false,
     "generated" : "true",
     "icons" : [
         {
