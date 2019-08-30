@@ -4,10 +4,10 @@ title: UAAP Real Time Sentiment Analysis of Fan Tweets
 date: 2019-08-30
 author: Francis Avanceña
 tags: twitter, javascript, datascience
-cover_image: 
+cover_image:
 ---
 
-It is UAAP season once again and this year’s season 82  is hosted by Ateneo it is a good time to take a look at one of my favorite projects I did during my senior year in college. This one is taken from the final project for CS 129.1: Special Topics in Software Engineering: Contemporary Database Technologies, more commonly known as “Contempo DB”. For this project, we did a real-time tweet analysis of tweets during the Final Four game of the Ateneo Blue Eagles and the FEU Tamaraws last November 25, 2018. 
+It is UAAP season once again and this year’s season 82  is hosted by Ateneo it is a good time to take a look at one of my favorite projects I did during my senior year in college. This one is taken from the final project for CS 129.1: Special Topics in Software Engineering: Contemporary Database Technologies, more commonly known as “Contempo DB”. For this project, we did a real-time tweet analysis of tweets during the Final Four game of the Ateneo Blue Eagles and the FEU Tamaraws last November 25, 2018.
 
 ### What we wanted to find out.
 
@@ -101,7 +101,7 @@ function classifyTweet(tweet){
     ];
     let feuClassifiers = [
         // Classifiers for FEU here.
-    ];    
+    ];
     let tweetText;
     if (tweet.extended_tweet == undefined){
         regText = tweet.text;
@@ -230,7 +230,7 @@ results = db.runCommand({
 
 ### Results
 
-For our results in the web app we mainly looked at the following: using a bar graph we looked at the most frequently used words, most used positive words, most used negative words. Aside from that we also did Top 10 most positive tweets for both sides and a top 10 most negative tweets for both sides. Using chartkick.js we used an API endpoint to get the data for performance (gotta have that fast page load).  
+For our results in the web app we mainly looked at the following: using a bar graph we looked at the most frequently used words, most used positive words, most used negative words. Aside from that we also did Top 10 most positive tweets for both sides and a top 10 most negative tweets for both sides. Using chartkick.js we used an API endpoint to get the data for performance (gotta have that fast page load).
 
 
 #### General Results
@@ -279,26 +279,54 @@ For our results in the web app we mainly looked at the following: using a bar gr
 
 #### Some examples of top positive tweets from Ateneo fans
 
-* LOVE YOUR ENERGY, @ThirdyRavenaaa 💙 WOOHOO! Galing, galing! 
-<br>Sentiment Score: 14
 
-* Thirdy’s maturity every year since high school has been amazing! What’s more amazing is the maturity of not his hops but of the maturity of his biceps triceps and shoulders!!! 💪🏻 Am I right? Haha! Good job @ThirdyRavenaaa !!! 
-<br>Sentiment Score: 14
-
-* Finals here we come!! 💙 Congratulations, Ateneo Blue Eagles 😃 Good luck sa finals 😊💙 #BEBOB #UAAPFinalFour #OBF 
-<br>Sentiment Score: 13
+<table class="ui celled unstackable table">
+    <thead>
+        <tr>
+            <th>Tweet</th>
+            <th>Sentiment Score</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>LOVE YOUR ENERGY, @ThirdyRavenaaa 💙 WOOHOO! Galing, galing!</td>
+        <td>14</td>
+    </tr>
+    <tr>
+        <td>Thirdy’s maturity every year since high school has been amazing! What’s more amazing is the maturity of not his hops but of the maturity of his biceps triceps and shoulders!!! 💪🏻 Am I right? Haha! Good job @ThirdyRavenaaa !!!</td>
+        <td>14</td>
+    </tr>
+    <tr>
+        <td>Finals here we come!! 💙 Congratulations, Ateneo Blue Eagles 😃 Good luck sa finals 😊💙 #BEBOB #UAAPFinalFour #OBF</td>
+        <td>13</td>
+    </tr>
+    </tbody>
+</table>
 
 #### Now some top negative tweets from Ateneo fans
 
-* Sino yung #21 sa FEU? Halatang halata ang pagbunggo kay Isaac aba!! Gago ka?? Kitang kita sa replay pwede ka dumaan sa iba talagang ganun pa ha? Bullshit ka. 
-<br>Sentiment Score: -9
-
-* Get yo shit in da basketball court Stockton. There’s no way that’s a basketball play. UAAP should ban that fool. #OBF 
-<br>Sentiment Score: -9
-
-* @alecstockton2 how are you doing now in the dugout Mr. Ill tempered piece of shit 
-<br>Sentiment Score: -6
-
+<table class="ui celled unstackable table">
+    <thead>
+        <tr>
+            <th>Tweet</th>
+            <th>Sentiment Score</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Sino yung #21 sa FEU? Halatang halata ang pagbunggo kay Isaac aba!! Gago ka?? Kitang kita sa replay pwede ka dumaan sa iba talagang ganun pa ha? Bullshit ka.</td>
+        <td>-9</td>
+    </tr>
+    <tr>
+        <td>Get yo shit in da basketball court Stockton. There’s no way that’s a basketball play. UAAP should ban that fool. #OBF</td>
+        <td>-9</td>
+    </tr>
+    <tr>
+        <td>@alecstockton2 how are you doing now in the dugout Mr. Ill tempered piece of shit</td>
+        <td>-6</td>
+    </tr>
+    </tbody>
+</table>
 
 #### Looking at the FEU Tweets
 
@@ -319,27 +347,56 @@ For our results in the web app we mainly looked at the following: using a bar gr
 
 #### Some examples of top positive tweets from FEU fans
 
-* I will always be proud of you guys!! You have fought well! Let’s bounce back next year!! Braver!! 💪 Salute to all our graduating players 👏 You all have made the FEU Community so proud!! Thank you our brave Tams! Mahal namin kayo!! 💚💛 
-<br>Sentiment Score: 17
-
-* Though far from home, our feet may roam Our love will still be true Our voices shall unite to praise thy name anew We’ll treasure within our hearts the FEU! Horns up, Tamaraws! 💚💛🔰 Atleast we made it to the final 4. Not bad at all, Congrats Areneyow! 🤣 
-<br>Sentiment Score: 15
-
-* Nothing but love and respect to the FEU Men's Basketball team 💚💛 you guys did great! We'll bounce back strong next season. 
-<br>Sentiment Score: 10
+<table class="ui celled unstackable table">
+    <thead>
+        <tr>
+            <th>Tweet</th>
+            <th>Sentiment Score</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>I will always be proud of you guys!! You have fought well! Let’s bounce back next year!! Braver!! 💪 Salute to all our graduating players 👏 You all have made the FEU Community so proud!! Thank you our brave Tams! Mahal namin kayo!! 💚💛</td>
+        <td>17</td>
+    </tr>
+    <tr>
+        <td>Though far from home, our feet may roam Our love will still be true Our voices shall unite to praise thy name anew We’ll treasure within our hearts the FEU! Horns up, Tamaraws! 💚💛🔰 Atleast we made it to the final 4. Not bad at all, Congrats Areneyow! 🤣</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>Nothing but love and respect to the FEU Men's Basketball team 💚💛 you guys did great! We'll bounce back strong next season.</td>
+        <td>10</td>
+    </tr>
+    </tbody>
+</table>
 
 #### Now some top negative tweets from FEU fans
 
-* PUTANGINA MO KA WALA KANG MANNERS GAGO!!!! MGA FANS NG ATENEO BOO KAYO MGA QAQO 
-<br>Sentiment Score: -9
+We even got a Bisaya tweet in the mix.
 
-* thirdy ravena ayaw paawat sus
-<br>Sentiment Score: -7
 
-We even got a bisaya tweet in the mix.
-
-* Dili jud ni mawala ang BIASING pag magdula ang ATENEO ayy. Yawa mani si Thirdy Ravena. Playing victim pisteeee 🤬🤬🤬 di kayko ga watch ug basketball pero puta siya ✌🏼 
-<br>Sentiment Score: -7
+<table class="ui celled unstackable table">
+    <thead>
+        <tr>
+            <th>Tweet</th>
+            <th>Sentiment Score</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>PUTANGINA MO KA WALA KANG MANNERS GAGO!!!! MGA FANS NG ATENEO BOO KAYO MGA QAQO</td>
+        <td>-9</td>
+    </tr>
+    <tr>
+        <td>thirdy ravena ayaw paawat sus</td>
+        <td>-7</td>
+    </tr>
+    <tr>
+        <td>Dili jud ni mawala ang BIASING pag magdula ang ATENEO ayy. Yawa mani si Thirdy Ravena. Playing victim pisteeee 🤬🤬🤬 di kayko ga watch ug basketball pero puta siya ✌🏼</td>
+        <td>-7</td>
+    </tr>
+    </tbody>
+</table>
 
 ### Zipf's Law
 
@@ -354,9 +411,9 @@ In a nutshell, Zipf’s law just states that given a large sample of words used,
 
 ### Final Words
 
-Me and my group our not data scientists, the methodology that we used is not perfect. We made this project specifically for a database class not necessarily a pattern recognition or data modeling class. The classification logic can be significantly improved and there are more things to analyze in tweets rather than sentiments. I encourage the use of Twitter’s excellent API to look into more possible data science use cases. I also included our presentation deck that has most of the points raised here and a video of our gatherer and classifier in action during the game itself. 
+Me and my group our not data scientists, the methodology that we used is not perfect. We made this project specifically for a database class not necessarily a pattern recognition or data modeling class. The classification logic can be significantly improved and there are more things to analyze in tweets rather than sentiments. I encourage the use of Twitter’s excellent API to look into more possible data science use cases. I also included our presentation deck that has most of the points raised here and a video of our gatherer and classifier in action during the game itself.
 
 
 <p style="text-align:center;">
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vToyn-FFltYTn9heFF28Nv-ULFTUREP8e66fCFuA9nfyiR-3_UaxlWDu5Dywt-rcxHcPqMVET3gyS_Z/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR-ozGHpy96TgR2rwHNDmMHsRF1sC3QV5ojjzUYoqP3-8eg_lgkXFUL3oYiyErHXTdcrxH5QhAwir8p/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </p>
