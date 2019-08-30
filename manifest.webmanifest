@@ -8,13 +8,13 @@
     "theme_color" : "transparent",
     "description" : "Hello! I am Francis and a Management Information Systems professional that currently works in the FinTech Industry in the Philippines.",
     "orientation" : "any",
-    "background_color" : "transparent",
-    "related_applications" : "",
+    "background_color" : "white",
+    "theme_color": "white",
     "prefer_related_applications" : "false",
     "generated" : "true",
     "icons" : [
         {
             "src": "https://francisoliver.dev/assets/img/favicon.png",
-            "sizes": "400x400"
+            "sizes": "512x512"
         }
     ]}
