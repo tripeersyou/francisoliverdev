@@ -9,9 +9,6 @@
             document.querySelectorAll('.ui.button').forEach(function(button){
                 button.classList.remove('inverted');
             });
-            document.querySelectorAll('.blog-image').forEach(function(img) {
-                img.style.filter = "invert(0)"
-            });
             document.querySelectorAll('.ui.table').forEach(function(table) {
                 table.classList.remove('inverted');
             });
@@ -19,9 +16,6 @@
             document.documentElement.setAttribute('data-theme', 'dark');
             document.querySelectorAll('.ui.button').forEach(function(button){
                 button.classList.add('inverted');
-            });
-            document.querySelectorAll('.blog-image').forEach(function(img) {
-                img.style.filter = "invert(0.8)"
             });
             document.querySelectorAll('.ui.table').forEach(function(table) {
                 table.classList.add('inverted');
@@ -37,9 +31,6 @@
             document.querySelectorAll('.ui.button').forEach(function(button){
                 button.classList.add('inverted');
             });
-            document.querySelectorAll('.blog-image').forEach(function(img) {
-                img.style.filter = "invert(0.8)"
-             });
              document.querySelectorAll('.ui.table').forEach(function(table) {
                 table.classList.add('inverted');
             });
@@ -50,14 +41,17 @@
             document.querySelectorAll('.ui.button').forEach(function(button){
                 button.classList.remove('inverted');
             });
-            document.querySelectorAll('.blog-image').forEach(function(img) {
-               img.style.filter = "invert(0)"
-            });
             document.querySelectorAll('.ui.table').forEach(function(table) {
                 table.classList.remove('inverted');
             });
         }
     });
+    
+    const zooming = new Zooming({
+        bgOpacity: 0.3
+    });
+    
+    zooming.listen('.blog-image');
 
     let trans = () => {
         document.documentElement.classList.add('transition');
