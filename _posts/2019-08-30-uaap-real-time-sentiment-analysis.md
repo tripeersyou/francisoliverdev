@@ -4,14 +4,14 @@ title: UAAP Real Time Sentiment Analysis of Fan Tweets
 date: 2019-08-30
 author: Francis Avanceña
 tags: twitter, javascript, datascience
-cover_image:
----
+cover_image: 
 
+---
 It is UAAP season once again and this year’s season 82  is hosted by Ateneo it is a good time to take a look at one of my favorite projects I did during my senior year in college. This one is taken from the final project for CS 129.1: Special Topics in Software Engineering: Contemporary Database Technologies, more commonly known as “Contempo DB”. For this project, we did a real-time tweet analysis of tweets during the Final Four game of the Ateneo Blue Eagles and the FEU Tamaraws last November 25, 2018.
 
 ### What we wanted to find out.
 
-For the project, we wanted to find out through data analytics are three things?
+For the project, we wanted to find out through data analytics are three things.
 
 1. What percentage of the tweets regarding the UAAP game are toxic or not?
 2. Which fanbase or contingent is more toxic?
@@ -61,6 +61,7 @@ const trackingWords = [
 ```
 
 ### How did we do it?
+
 We followed this simple methodology:
 
 1. Using Twitter’s streaming API, we subscribed to the ‘statuses/filter’ endpoint.
@@ -69,7 +70,6 @@ We followed this simple methodology:
 4. Then we “classified” them to be either an Ateneo contingent or FEU contingent tweet.
 
 For the sentiment analysis, we simply thought of toxic and good words in Filipino and translated it to English and set their score as the same as their English score. This is not the best way to do it but for our case, it was the best we can do at that time. We managed to come up with around 50+ toxic words and around 40+ good words.
-
 
 ```javascript
 console.log("Listening for tweets . . .");
@@ -92,7 +92,6 @@ stream.on('tweet',(tweet)=>{
 ```
 
 We first gather and analyze the tweets coming in from the Twitter API and save it to a MongoDB collection, with the sentiment score and the tokenized tweet, based on a simple classification logic: For negative sentiment score tweets, if it talks about a certain school or team it is classified on the opposing side. On the other hand for positive and neutral scored tweets we classify it to them as fans of the team they are talking about. This classification is happening as the tweets come by.
-
 
 ```javascript
 function classifyTweet(tweet){
@@ -136,7 +135,6 @@ function classifyTweet(tweet){
     }
 }
 ```
-
 
 After the gathering we did a map-reduce on the tokenized tweets that we got, for three different use cases, we didn’t include stop words for both English and Filipino that we got from our professor, for the map-reduce phase.
 
@@ -232,170 +230,168 @@ results = db.runCommand({
 
 For our results in the web app we mainly looked at the following: using a bar graph we looked at the most frequently used words, most used positive words, most used negative words. Aside from that we also did Top 10 most positive tweets for both sides and a top 10 most negative tweets for both sides. Using chartkick.js we used an API endpoint to get the data for performance (gotta have that fast page load).
 
-
 #### General Results
+
 <!-- Results Here -->
 <figure>
-    <img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/general/count.jpg" alt="Total Count of Tweets">
-    <figcaption>Total Count of Tweets</figcaption>
+<img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/general/count.jpg" alt="Total Count of Tweets">
+<figcaption>Total Count of Tweets</figcaption>
 </figure>
 <br>
 <figure>
-    <img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/general/count-positive.jpg" alt="Total Count of Positive Tweets">
-    <figcaption>Total Count of Positive Tweets</figcaption>
+<img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/general/count-positive.jpg" alt="Total Count of Positive Tweets">
+<figcaption>Total Count of Positive Tweets</figcaption>
 </figure>
 <br>
 <figure>
-    <img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/general/count-negative.jpg" alt="Total Count of Negative Tweets">
-    <figcaption>Total Count of Negative Tweets</figcaption>
+<img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/general/count-negative.jpg" alt="Total Count of Negative Tweets">
+<figcaption>Total Count of Negative Tweets</figcaption>
 </figure>
 <br>
 <figure>
-    <img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/general/percent-positive.jpg" alt="Total Percentage of Positive Tweets">
-    <figcaption>Total Percentage of Positive Tweets</figcaption>
+<img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/general/percent-positive.jpg" alt="Total Percentage of Positive Tweets">
+<figcaption>Total Percentage of Positive Tweets</figcaption>
 </figure>
 <br>
 <figure>
-    <img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/general/percent-negative.jpg" alt="Total Percentage of Negative Tweets">
-    <figcaption>Total Percentage of Negative Tweets</figcaption>
+<img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/general/percent-negative.jpg" alt="Total Percentage of Negative Tweets">
+<figcaption>Total Percentage of Negative Tweets</figcaption>
 </figure>
 
 #### Looking at the Ateneo Tweets
 
 <figure>
-    <img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/ateneo/count.jpg" alt="Most Frequently Used Words/Emojis - Ateneo">
-    <figcaption>Most Frequently Used Words/Emojis</figcaption>
+<img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/ateneo/count.jpg" alt="Most Frequently Used Words/Emojis - Ateneo">
+<figcaption>Most Frequently Used Words/Emojis</figcaption>
 </figure>
 <br>
 <figure>
-    <img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/ateneo/positive.jpg" alt="Most Frequently Used Positive Words/Emojis - Ateneo">
-    <figcaption>Most Frequently Used Positive Words/Emojis</figcaption>
+<img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/ateneo/positive.jpg" alt="Most Frequently Used Positive Words/Emojis - Ateneo">
+<figcaption>Most Frequently Used Positive Words/Emojis</figcaption>
 </figure>
 <br>
 <figure>
-    <img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/ateneo/negative.jpg" alt="Most Frequently Used Negative Words/Emojis - Ateneo">
-    <figcaption>Most Frequently Used Negative Words/Emojis</figcaption>
+<img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/ateneo/negative.jpg" alt="Most Frequently Used Negative Words/Emojis - Ateneo">
+<figcaption>Most Frequently Used Negative Words/Emojis</figcaption>
 </figure>
 
 #### Some examples of top positive tweets from Ateneo fans
 
-
 <table class="ui celled unstackable table">
-    <thead>
-        <tr>
-            <th>Tweet</th>
-            <th>Sentiment Score</th>
-        </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>LOVE YOUR ENERGY, @ThirdyRavenaaa 💙 WOOHOO! Galing, galing!</td>
-        <td>14</td>
-    </tr>
-    <tr>
-        <td>Thirdy’s maturity every year since high school has been amazing! What’s more amazing is the maturity of not his hops but of the maturity of his biceps triceps and shoulders!!! 💪🏻 Am I right? Haha! Good job @ThirdyRavenaaa !!!</td>
-        <td>14</td>
-    </tr>
-    <tr>
-        <td>Finals here we come!! 💙 Congratulations, Ateneo Blue Eagles 😃 Good luck sa finals 😊💙 #BEBOB #UAAPFinalFour #OBF</td>
-        <td>13</td>
-    </tr>
-    </tbody>
+<thead>
+<tr>
+<th>Tweet</th>
+<th>Sentiment Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LOVE YOUR ENERGY, @ThirdyRavenaaa 💙 WOOHOO! Galing, galing!</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Thirdy’s maturity every year since high school has been amazing! What’s more amazing is the maturity of not his hops but of the maturity of his biceps triceps and shoulders!!! 💪🏻 Am I right? Haha! Good job @ThirdyRavenaaa !!!</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Finals here we come!! 💙 Congratulations, Ateneo Blue Eagles 😃 Good luck sa finals 😊💙 #BEBOB #UAAPFinalFour #OBF</td>
+<td>13</td>
+</tr>
+</tbody>
 </table>
 
 #### Now some top negative tweets from Ateneo fans
 
 <table class="ui celled unstackable table">
-    <thead>
-        <tr>
-            <th>Tweet</th>
-            <th>Sentiment Score</th>
-        </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>Sino yung #21 sa FEU? Halatang halata ang pagbunggo kay Isaac aba!! Gago ka?? Kitang kita sa replay pwede ka dumaan sa iba talagang ganun pa ha? Bullshit ka.</td>
-        <td>-9</td>
-    </tr>
-    <tr>
-        <td>Get yo shit in da basketball court Stockton. There’s no way that’s a basketball play. UAAP should ban that fool. #OBF</td>
-        <td>-9</td>
-    </tr>
-    <tr>
-        <td>@alecstockton2 how are you doing now in the dugout Mr. Ill tempered piece of shit</td>
-        <td>-6</td>
-    </tr>
-    </tbody>
+<thead>
+<tr>
+<th>Tweet</th>
+<th>Sentiment Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sino yung #21 sa FEU? Halatang halata ang pagbunggo kay Isaac aba!! Gago ka?? Kitang kita sa replay pwede ka dumaan sa iba talagang ganun pa ha? Bullshit ka.</td>
+<td>-9</td>
+</tr>
+<tr>
+<td>Get yo shit in da basketball court Stockton. There’s no way that’s a basketball play. UAAP should ban that fool. #OBF</td>
+<td>-9</td>
+</tr>
+<tr>
+<td>@alecstockton2 how are you doing now in the dugout Mr. Ill tempered piece of shit</td>
+<td>-6</td>
+</tr>
+</tbody>
 </table>
 
 #### Looking at the FEU Tweets
 
 <figure>
-    <img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/feu/count.jpg" alt="Most Frequently Used Words/Emojis - FEU">
-    <figcaption>Most Frequently Used Words/Emojis</figcaption>
+<img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/feu/count.jpg" alt="Most Frequently Used Words/Emojis - FEU">
+<figcaption>Most Frequently Used Words/Emojis</figcaption>
 </figure>
 <br>
 <figure>
-    <img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/feu/positive.jpg" alt="Most Frequently Used Positive Words/Emojis - FEU">
-    <figcaption>Most Frequently Used Positive Words/Emojis</figcaption>
+<img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/feu/positive.jpg" alt="Most Frequently Used Positive Words/Emojis - FEU">
+<figcaption>Most Frequently Used Positive Words/Emojis</figcaption>
 </figure>
 <br>
 <figure>
-    <img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/feu/negative.jpg" alt="Most Frequently Used Negative Words/Emojis - FEU">
-    <figcaption>Most Frequently Used Negative Words/Emojis</figcaption>
+<img class="ui image blog-image" src="/assets/img/blog/uaap-real-time-sentiment-analysis/feu/negative.jpg" alt="Most Frequently Used Negative Words/Emojis - FEU">
+<figcaption>Most Frequently Used Negative Words/Emojis</figcaption>
 </figure>
 
 #### Some examples of top positive tweets from FEU fans
 
 <table class="ui celled unstackable table">
-    <thead>
-        <tr>
-            <th>Tweet</th>
-            <th>Sentiment Score</th>
-        </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>I will always be proud of you guys!! You have fought well! Let’s bounce back next year!! Braver!! 💪 Salute to all our graduating players 👏 You all have made the FEU Community so proud!! Thank you our brave Tams! Mahal namin kayo!! 💚💛</td>
-        <td>17</td>
-    </tr>
-    <tr>
-        <td>Though far from home, our feet may roam Our love will still be true Our voices shall unite to praise thy name anew We’ll treasure within our hearts the FEU! Horns up, Tamaraws! 💚💛🔰 Atleast we made it to the final 4. Not bad at all, Congrats Areneyow! 🤣</td>
-        <td>15</td>
-    </tr>
-    <tr>
-        <td>Nothing but love and respect to the FEU Men's Basketball team 💚💛 you guys did great! We'll bounce back strong next season.</td>
-        <td>10</td>
-    </tr>
-    </tbody>
+<thead>
+<tr>
+<th>Tweet</th>
+<th>Sentiment Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I will always be proud of you guys!! You have fought well! Let’s bounce back next year!! Braver!! 💪 Salute to all our graduating players 👏 You all have made the FEU Community so proud!! Thank you our brave Tams! Mahal namin kayo!! 💚💛</td>
+<td>17</td>
+</tr>
+<tr>
+<td>Though far from home, our feet may roam Our love will still be true Our voices shall unite to praise thy name anew We’ll treasure within our hearts the FEU! Horns up, Tamaraws! 💚💛🔰 Atleast we made it to the final 4. Not bad at all, Congrats Areneyow! 🤣</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Nothing but love and respect to the FEU Men's Basketball team 💚💛 you guys did great! We'll bounce back strong next season.</td>
+<td>10</td>
+</tr>
+</tbody>
 </table>
 
 #### Now some top negative tweets from FEU fans
 
 We even got a Bisaya tweet in the mix.
 
-
 <table class="ui celled unstackable table">
-    <thead>
-        <tr>
-            <th>Tweet</th>
-            <th>Sentiment Score</th>
-        </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>PUTANGINA MO KA WALA KANG MANNERS GAGO!!!! MGA FANS NG ATENEO BOO KAYO MGA QAQO</td>
-        <td>-9</td>
-    </tr>
-    <tr>
-        <td>thirdy ravena ayaw paawat sus</td>
-        <td>-7</td>
-    </tr>
-    <tr>
-        <td>Dili jud ni mawala ang BIASING pag magdula ang ATENEO ayy. Yawa mani si Thirdy Ravena. Playing victim pisteeee 🤬🤬🤬 di kayko ga watch ug basketball pero puta siya ✌🏼</td>
-        <td>-7</td>
-    </tr>
-    </tbody>
+<thead>
+<tr>
+<th>Tweet</th>
+<th>Sentiment Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PUTANGINA MO KA WALA KANG MANNERS GAGO!!!! MGA FANS NG ATENEO BOO KAYO MGA QAQO</td>
+<td>-9</td>
+</tr>
+<tr>
+<td>thirdy ravena ayaw paawat sus</td>
+<td>-7</td>
+</tr>
+<tr>
+<td>Dili jud ni mawala ang BIASING pag magdula ang ATENEO ayy. Yawa mani si Thirdy Ravena. Playing victim pisteeee 🤬🤬🤬 di kayko ga watch ug basketball pero puta siya ✌🏼</td>
+<td>-7</td>
+</tr>
+</tbody>
 </table>
 
 ### Zipf's Law
@@ -408,11 +404,9 @@ The results and the curve that it shows reminds me of a VSauce video that I watc
 
 In a nutshell, Zipf’s law just states that given a large sample of words used, the frequency of any word is inversely proportional to its rank in the frequency table.  In mathematical terms, a  word number n has a frequency proportional to 1/n.
 
-
 ### Final Words
 
 Me and my group our not data scientists, the methodology that we used is not perfect. We made this project specifically for a database class not necessarily a pattern recognition or data modeling class. The classification logic can be significantly improved and there are more things to analyze in tweets rather than sentiments. I encourage the use of Twitter’s excellent API to look into more possible data science use cases. I also included our presentation deck that has most of the points raised here and a video of our gatherer and classifier in action during the game itself.
-
 
 <p style="text-align:center;">
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR-ozGHpy96TgR2rwHNDmMHsRF1sC3QV5ojjzUYoqP3-8eg_lgkXFUL3oYiyErHXTdcrxH5QhAwir8p/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
