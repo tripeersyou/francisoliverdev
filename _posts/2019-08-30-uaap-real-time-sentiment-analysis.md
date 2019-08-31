@@ -14,7 +14,7 @@ It is UAAP season once again and this year’s season 82  is hosted by Ateneo it
 For the project, we wanted to find out through data analytics are three things.
 
 1. What percentage of the tweets regarding the UAAP game are toxic or not?
-2. Which fanbase or contingent is more toxic?
+2. Which fan base or contingent is more toxic?
 3. What are the most frequent words that fans use?
 
 If you look at Twitter during these crucial collegiate games you see that most of the Philippine Trends are taken up by topics that are related to the game. However, due to the action happening in the games, some of the fans become overly passionate about their tweets.  This means there is good data velocity coming from Twitter’s API and there a lot of emotionally charged tweets that we can analyze.
