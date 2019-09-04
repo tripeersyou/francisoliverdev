@@ -3,8 +3,8 @@ layout: post
 title: UAAP Real Time Sentiment Analysis of Fan Tweets
 date: 2019-08-30
 author: Francis Avanceña
-tags: twitter, javascript, datascience
-cover_image: 
+tags: twitter, javascript, datascience, datavisualization
+cover_image:
 
 ---
 It is UAAP season once again and this year’s season 82  is hosted by Ateneo it is a good time to take a look at one of my favorite projects I did during my senior year in college. This one is taken from the final project for CS 129.1: Special Topics in Software Engineering: Contemporary Database Technologies, more commonly known as “Contempo DB”. For this project, we did a real-time tweet analysis of tweets during the Final Four game of the Ateneo Blue Eagles and the FEU Tamaraws last November 25, 2018.
