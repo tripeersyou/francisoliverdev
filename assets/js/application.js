@@ -26,7 +26,6 @@
     }
 
     window.addEventListener('shake', function(e){
-        alert('Shake');
         if(document.documentElement.getAttribute('data-theme') === "light"){
             trans();
             document.cookie = "data-theme=dark";
