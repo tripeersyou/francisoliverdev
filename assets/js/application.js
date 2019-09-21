@@ -2,6 +2,8 @@
 
  function themeChange(){
     let theme = document.querySelector('.theme-icon');
+    let shakeEvent = new Shake();
+    shakeEvent.start(); 
 
     if(document.cookie.includes('data-theme')){
         if(document.cookie.includes('data-theme=light')){
@@ -22,6 +24,31 @@
             });
         }
     }
+
+    window.addEventListener('shake', function(e){
+        alert('Shake');
+        if(document.documentElement.getAttribute('data-theme') === "light"){
+            trans();
+            document.cookie = "data-theme=dark";
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.querySelectorAll('.ui.button').forEach(function(button){
+                button.classList.add('inverted');
+            });
+             document.querySelectorAll('.ui.table').forEach(function(table) {
+                table.classList.add('inverted');
+            });
+        } else {
+            trans();
+            document.cookie = "data-theme=light";
+            document.documentElement.setAttribute('data-theme', 'light');
+            document.querySelectorAll('.ui.button').forEach(function(button){
+                button.classList.remove('inverted');
+            });
+            document.querySelectorAll('.ui.table').forEach(function(table) {
+                table.classList.remove('inverted');
+            });
+        }
+    }, false);
 
     theme.addEventListener('click',function(e){
         if(document.documentElement.getAttribute('data-theme') === "light"){
