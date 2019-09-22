@@ -39,7 +39,7 @@
              document.querySelectorAll('.ui.table').forEach(function(table) {
                 table.classList.add('inverted');
             });
-        } else {
+        } else if(document.documentElement.getAttribute('data-theme') === "dark") {
             light.play();
             trans();
             document.cookie = "data-theme=light";
@@ -64,7 +64,7 @@
              document.querySelectorAll('.ui.table').forEach(function(table) {
                 table.classList.add('inverted');
             });
-        } else {
+        } else if(document.documentElement.getAttribute('data-theme') === "dark"){
             trans();
             document.cookie = "data-theme=light";
             document.documentElement.setAttribute('data-theme', 'light');
