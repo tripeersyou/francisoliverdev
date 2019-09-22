@@ -1,9 +1,10 @@
  document.addEventListener('turbolinks:load',themeChange)
+ 
+ let shakeEvent = new Shake();
+ shakeEvent.start(); 
 
  function themeChange(){
     let theme = document.querySelector('.theme-icon');
-    let shakeEvent = new Shake();
-    shakeEvent.start(); 
 
     let dark = new Audio('/assets/js/audio/dark.m4a');
     let light = new Audio('/assets/js/audio/light.m4a');
@@ -27,36 +28,11 @@
         }
     }
 
-    window.addEventListener('shake', function(e){
-        if(document.documentElement.getAttribute('data-theme') === "light"){
-            dark.play();
-            trans();
-            document.cookie = "data-theme=dark";
-            document.documentElement.setAttribute('data-theme', 'dark');
-            document.querySelectorAll('.ui.button').forEach(function(button){
-                button.classList.add('inverted');
-            });
-             document.querySelectorAll('.ui.table').forEach(function(table) {
-                table.classList.add('inverted');
-            });
-        } else if(document.documentElement.getAttribute('data-theme') === "dark") {
-            light.play();
-            trans();
-            document.cookie = "data-theme=light";
-            document.documentElement.setAttribute('data-theme', 'light');
-            document.querySelectorAll('.ui.button').forEach(function(button){
-                button.classList.remove('inverted');
-            });
-            document.querySelectorAll('.ui.table').forEach(function(table) {
-                table.classList.remove('inverted');
-            });
-        }
-    }, false);
 
     theme.addEventListener('click',function(e){
-        if(document.documentElement.getAttribute('data-theme') === "light"){
+        if(document.documentElement.getAttribute('data-theme') === 'light'){
             trans();
-            document.cookie = "data-theme=dark";
+            document.cookie = 'data-theme=dark';
             document.documentElement.setAttribute('data-theme', 'dark');
             document.querySelectorAll('.ui.button').forEach(function(button){
                 button.classList.add('inverted');
@@ -64,9 +40,9 @@
              document.querySelectorAll('.ui.table').forEach(function(table) {
                 table.classList.add('inverted');
             });
-        } else if(document.documentElement.getAttribute('data-theme') === "dark"){
+        } else {
             trans();
-            document.cookie = "data-theme=light";
+            document.cookie = 'data-theme=light';
             document.documentElement.setAttribute('data-theme', 'light');
             document.querySelectorAll('.ui.button').forEach(function(button){
                 button.classList.remove('inverted');
@@ -82,11 +58,37 @@
     });
     
     zooming.listen('.blog-image');
-
-    let trans = () => {
-        document.documentElement.classList.add('transition');
-        window.setTimeout(()=>{
-            document.documentElement.classList.remove('transition');
-        }, 1000);
-    }
  }
+
+ window.addEventListener('shake', function(e){
+    if(document.documentElement.getAttribute('data-theme') === 'light'){
+        dark.play();
+        trans();
+        document.cookie = 'data-theme=dark';
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.querySelectorAll('.ui.button').forEach(function(button){
+            button.classList.add('inverted');
+        });
+         document.querySelectorAll('.ui.table').forEach(function(table) {
+            table.classList.add('inverted');
+        });
+    } else {
+        light.play();
+        trans();
+        document.cookie = 'data-theme=light';
+        document.documentElement.setAttribute('data-theme', 'light');
+        document.querySelectorAll('.ui.button').forEach(function(button){
+            button.classList.remove('inverted');
+        });
+        document.querySelectorAll('.ui.table').forEach(function(table) {
+            table.classList.remove('inverted');
+        });
+    }
+});
+
+ let trans = () => {
+    document.documentElement.classList.add('transition');
+    window.setTimeout(()=>{
+        document.documentElement.classList.remove('transition');
+    }, 1000);
+}
