@@ -5,6 +5,8 @@
     let shakeEvent = new Shake();
     shakeEvent.start(); 
 
+    let dark = new Audio('/assets/js/audio/dark.m4a');
+    let light = new Audio('/assets/js/audio/light.m4a');
     if(document.cookie.includes('data-theme')){
         if(document.cookie.includes('data-theme=light')){
             document.documentElement.setAttribute('data-theme', 'light');
@@ -27,6 +29,7 @@
 
     window.addEventListener('shake', function(e){
         if(document.documentElement.getAttribute('data-theme') === "light"){
+            dark.play();
             trans();
             document.cookie = "data-theme=dark";
             document.documentElement.setAttribute('data-theme', 'dark');
@@ -37,6 +40,7 @@
                 table.classList.add('inverted');
             });
         } else {
+            light.play();
             trans();
             document.cookie = "data-theme=light";
             document.documentElement.setAttribute('data-theme', 'light');
