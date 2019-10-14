@@ -406,7 +406,7 @@ In a nutshell, Zipf’s law just states that given a large sample of words used,
 
 ### Final Words
 
-Me and my group our not data scientists, the methodology that we used is not perfect. We made this project specifically for a database class not necessarily a pattern recognition or data modeling class. The classification logic can be significantly improved and there are more things to analyze in tweets rather than sentiments. I encourage the use of Twitter’s excellent API to look into more possible data science use cases. I also included our presentation deck that has most of the points raised here and a video of our gatherer and classifier in action during the game itself.
+Me and my group are not data scientists, the methodology that we used is not perfect. We made this project specifically for a database class not necessarily a pattern recognition or data modeling class. The classification logic can be significantly improved and there are more things to analyze in tweets rather than sentiments. I encourage the use of Twitter’s excellent API to look into more possible data science use cases. I also included our presentation deck that has most of the points raised here and a video of our gatherer and classifier in action during the game itself.
 
 <p style="text-align:center;">
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR-ozGHpy96TgR2rwHNDmMHsRF1sC3QV5ojjzUYoqP3-8eg_lgkXFUL3oYiyErHXTdcrxH5QhAwir8p/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
