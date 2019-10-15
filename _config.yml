@@ -50,7 +50,7 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-seo-tag
   - jekyll-sitemap
-    
+
 include:
   - _redirects
   - search.xml
