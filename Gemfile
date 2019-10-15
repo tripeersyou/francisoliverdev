@@ -17,6 +17,7 @@ gem 'classifier-reborn'
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
+  gem 'liquid_reading_time'
   gem "jekyll-paginate-v2"
   gem "jekyll-seo-tag"
   gem "jekyll-sitemap"

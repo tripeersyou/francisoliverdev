@@ -36,7 +36,7 @@ pagination:
         <div class="twelve wide column">
             <h3 class="header">{{post.title}}</h3>
             <div class="meta">
-                <strong>Date:</strong> {{post.date | date_to_string}}
+                <strong>Date:</strong> {{post.date | date_to_string}} | <strong>Read Time:</strong> {{post.content | reading_time }} min.
             </div>
             <div class="description">
                 <p>{{post.excerpt}}</p>
@@ -49,7 +49,7 @@ pagination:
       {% else %}
       <h3 class="header">{{post.title}}</h3>
       <div class="meta">
-          <strong>Date:</strong> {{post.date | date_to_string}}
+          <strong>Date:</strong> {{post.date | date_to_string}} | <strong>Read Time:</strong> {{post.content | reading_time }} min.
       </div>
       <div class="description">
           <p>{{post.excerpt}}</p>

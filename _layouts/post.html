@@ -2,6 +2,7 @@
 layout: default
 ---
 
+
 <div class="ui breadcrumb">
     <a href="/" class="section">Home</a>
     <i class="right angle icon divider"></i>
@@ -13,7 +14,7 @@ layout: default
 
 
 <h1 class="post-title">{{page.title}}</h1>
-<small>{{page.date | date_to_string}}</small>
+<small>{{page.date | date_to_string}} | {{content | reading_time}} minute read.</small>
 {% if page.cover_image != nil %}
 <hr>
 <img src="{{page.cover_image}}" class="ui image centered rounded">
@@ -22,3 +23,28 @@ layout: default
 <hr>
 {% endif %}
 {{content}}
+
+<hr>
+
+<h2>Related Articles:</h2>
+<div class="ui stackable grid">
+{% for post in site.related_posts limit: 3%}
+    {% if post.id != page.id %}
+    <div class="six wide column">
+        <div class="ui raised segment wow fadeInUp">
+            <h4 class="header">{{post.title}}</h4>
+            <div class="meta">
+                <strong>Date:</strong> {{post.date | date_to_string}} | <strong>Read Time:</strong> {{post.content | reading_time }} min.
+            </div>
+            <div class="description">
+                <p>{{post.excerpt | truncatewords: 30}}</p>
+            </div>
+            <br>
+            <div class="extra">
+                <a href="{{post.url}}" class="ui basic button">View Post</a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endfor %}
+</div>

@@ -32,7 +32,7 @@ document.addEventListener('turbolinks:load', function () {
                 <div class="twelve wide column">
                     <h3 class="header">${post.title}</h3>
                     <div class="meta">
-                        <strong>Date:</strong> ${post.date}
+                        <strong>Date:</strong> ${post.date} | <strong>Read Time:</strong> ${post.read_time} min.
                     </div>
                     <br>
                     <div class="description">
@@ -63,7 +63,7 @@ document.addEventListener('turbolinks:load', function () {
             } else {
                 html += `<h3 class="header">${post.title}</h3>
                 <div class="meta">
-                    <strong>Date:</strong> ${post.date}
+                    <strong>Date:</strong> ${post.date} | <strong>Read Time:</strong> ${post.read_time} min.
                 </div>
                 <br>
                 <div class="description">
