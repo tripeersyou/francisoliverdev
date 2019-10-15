@@ -36,8 +36,9 @@ layout: default
             <div class="meta">
                 <strong>Date:</strong> {{post.date | date_to_string}} | <strong>Read Time:</strong> {{post.content | reading_time }} min.
             </div>
+            <br>
             <div class="description">
-                <p>{{post.excerpt | truncatewords: 30}}</p>
+                <p>{{post.excerpt | strip_html |truncatewords: 30}}</p>
             </div>
             <br>
             <div class="extra">
