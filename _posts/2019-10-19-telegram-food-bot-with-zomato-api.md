@@ -43,7 +43,7 @@ Looking at the given endpoints of Zomato (check it out [here](https://developers
    </td>
   </tr>
   <tr>
-   <td>GET
+   <td><code>GET</code>
    </td>
    <td><code>/categories</code>
    </td>
@@ -51,7 +51,7 @@ Looking at the given endpoints of Zomato (check it out [here](https://developers
    </td>
   </tr>
   <tr>
-   <td>GET
+   <td><code>GET</code>
    </td>
    <td><code>/cities</code>
    </td>
@@ -59,7 +59,7 @@ Looking at the given endpoints of Zomato (check it out [here](https://developers
    </td>
   </tr>
   <tr>
-   <td>GET
+   <td><code>GET</code>
    </td>
    <td><code>/collections</code>
    </td>
@@ -67,7 +67,7 @@ Looking at the given endpoints of Zomato (check it out [here](https://developers
    </td>
   </tr>
   <tr>
-   <td>GET
+   <td><code>GET</code>
    </td>
    <td><code>/cuisines</code>
    </td>
@@ -75,7 +75,7 @@ Looking at the given endpoints of Zomato (check it out [here](https://developers
    </td>
   </tr>
   <tr>
-   <td>GET
+   <td><code>GET</code>
    </td>
    <td><code>/establishments</code>
    </td>
@@ -83,7 +83,7 @@ Looking at the given endpoints of Zomato (check it out [here](https://developers
    </td>
   </tr>
   <tr>
-   <td>GET
+   <td><code>GET</code>
    </td>
    <td><code>/geocode</code>
    </td>
@@ -95,7 +95,7 @@ Looking at the given endpoints of Zomato (check it out [here](https://developers
    </td>
   </tr>
   <tr>
-   <td>GET
+   <td><code>GET</code>
    </td>
    <td><code>/location_details</code>
    </td>
@@ -103,7 +103,7 @@ Looking at the given endpoints of Zomato (check it out [here](https://developers
    </td>
   </tr>
   <tr>
-   <td>GET
+   <td><code>GET</code>
    </td>
    <td><code>/locations</code>
    </td>
@@ -115,7 +115,7 @@ Looking at the given endpoints of Zomato (check it out [here](https://developers
    </td>
   </tr>
   <tr>
-   <td>GET
+   <td><code>GET</code>
    </td>
    <td><code>/dailymenu</code>
    </td>
@@ -123,7 +123,7 @@ Looking at the given endpoints of Zomato (check it out [here](https://developers
    </td>
   </tr>
   <tr>
-   <td>GET
+   <td><code>GET</code>
    </td>
    <td><code>/restaurant</code>
    </td>
@@ -131,7 +131,7 @@ Looking at the given endpoints of Zomato (check it out [here](https://developers
    </td>
   </tr>
   <tr>
-   <td>GET
+   <td><code>GET</code>
    </td>
    <td><code>/reviews</code>
    </td>
@@ -139,7 +139,7 @@ Looking at the given endpoints of Zomato (check it out [here](https://developers
    </td>
   </tr>
   <tr>
-   <td>GET
+   <td><code>GET</code>
    </td>
    <td><code>/search</code>
    </td>
@@ -149,9 +149,12 @@ Looking at the given endpoints of Zomato (check it out [here](https://developers
 </table>
 
 
-In order for an accurate search through the bot, we need to get three crucial points of information from the user first. First, where are they located (/location), next is the type of establishment they want to eat at (/establishments) and lastly the type of cuisine they would like to eat (/cuisines). After that, we search for the relevant restaurants through the search endpoint (/search) and display them to the user.
+In order for an accurate search through the bot, we need to get three crucial points of information from the user first. First, where are they located (`/location`), next is the type of establishment they want to eat at (`/establishments`) and lastly the type of cuisine they would like to eat (`/cuisines`). After that, we search for the relevant restaurants through the search endpoint (`/search`) and display them to the user.
 
-< INSERT FLOW CHART >
+<figure>
+<img class="ui image blog-image" src="/assets/img/blog/telegram-food-bot-with-zomato-api/flowchart.jpg" alt="The chatbot's process flow">
+<figcaption>The chatbot's process flow</figcaption>
+</figure>
 
 
 ### Implementation and Technology Used
@@ -189,20 +192,37 @@ For the implementation, I created three different telegram commands as access to
 </table>
 
 
-The bot’s flow is heavily reliant on the ‘`callbackQuery`’ event and parsing of that data to store for later usage in a case syntax. The bot does not use a database but instead uses a 2D array to store data unique per chat or conversation using Telegram’s chat_id as a unique identifier. As another kicker, I deployed the chatbot to Heroku in a free dyno, sending an HTTP request to the main URL every five minutes to avoid the chatbot from sleeping.
+The bot’s flow is heavily reliant on the ‘`callbackQuery`’ event and parsing of that data to store for later usage in a case syntax. The bot does not use a database but instead uses a 2D array to store data unique per chat or conversation using Telegram’s `chat_id` as a unique identifier. As another kicker, I deployed the chatbot to Heroku in a free dyno, sending an HTTP request to the main URL every five minutes to avoid the chatbot from sleeping.
 
 
 ### The chatbot in action
 
 
-1. Going through the main flow
+#### Going through the main flow
 
-<!-- < MAIN FLOW SCREENSHOTS > -->
+<div class="ui small images" style="text-align:center;">
+  <img class="ui image blog-image" src="/assets/img/blog/telegram-food-bot-with-zomato-api/about.jpg" alt="About">
+  <img class="ui image blog-image" src="/assets/img/blog/telegram-food-bot-with-zomato-api/get_started.jpg" alt="Get started">
+  <img class="ui image blog-image" src="/assets/img/blog/telegram-food-bot-with-zomato-api/set_location.jpg" alt="Set location">
+  <img class="ui image blog-image" src="/assets/img/blog/telegram-food-bot-with-zomato-api/set_establishment.jpg" alt="Set establishment">
+  <img class="ui image blog-image" src="/assets/img/blog/telegram-food-bot-with-zomato-api/set_cuisine.jpg" alt="Set cuisine">
+  <img class="ui image blog-image" src="/assets/img/blog/telegram-food-bot-with-zomato-api/restaurant_show.jpg" alt="Show resto">
+  <img class="ui image blog-image" src="/assets/img/blog/telegram-food-bot-with-zomato-api/set_restaurant.jpg" alt="Set resto">
+  <img class="ui image blog-image" src="/assets/img/blog/telegram-food-bot-with-zomato-api/show_map.jpg" alt="Show map">
+  <img class="ui image blog-image" src="/assets/img/blog/telegram-food-bot-with-zomato-api/view_rating.jpg" alt="View Rating">
+  <img class="ui image blog-image" src="/assets/img/blog/telegram-food-bot-with-zomato-api/view_highlights.jpg" alt="View highlights">
+</div>
 
-2. Doing a quick search
+#### Doing a quick search
 
-<!-- < QUICK SEARCH SCREENSHOTS > -->
+The quick search takes into consideration the set location through the `/location <KEYWORD>` command using the bot and immediately going to the quick search may not yield the best results.
 
+For this example, I put BGC Stopover Pavillion as my location so it takes into account that location when I search for a restaurant.
+
+<div class="ui medium images" style="text-align:center;">
+  <img class="ui image blog-image" src="/assets/img/blog/telegram-food-bot-with-zomato-api/quick_search.jpg" alt="Quick search">
+  <img class="ui image blog-image" src="/assets/img/blog/telegram-food-bot-with-zomato-api/quick_search_select.jpg" alt="Quick search select">
+</div>
 
 ### Possible Improvements
 
@@ -212,9 +232,9 @@ The possible improvements and features that can be added to the bot are as follo
 1. Having the user control to control to sort via the cost and rating.
 2. Having the user control how many restaurants in the search the bot will display as the results.
 3. Having the user choose what payment method they want and displaying restaurants that only have that payment method.
-4. Have suggested restaurants to try based on the user’s location via the /location_details endpoint.
+4. Have suggested restaurants to try based on the user’s location via the `/location_details` endpoint.
 5. Have a proper database to store the chat data.
-6. Make the chatbot less reliant on inlineKeyboards but on a ReplyKeyboardMarkup to have a real conversation experience with the bot and to show which user did what if the chatbot is in the group chat.
+6. Make the chatbot less reliant on `inlineKeyboards` but on a `ReplyKeyboardMarkup` to have a real conversation experience with the bot and to show which user did what if the chatbot is in the group chat.
 7. And other general performance updates (having a database instead of an array to store data).
 
 

@@ -56,7 +56,7 @@
     });
     
     const zooming = new Zooming({
-        bgOpacity: 0.3
+        bgOpacity: 0.25
     });
     
     zooming.listen('.blog-image');
