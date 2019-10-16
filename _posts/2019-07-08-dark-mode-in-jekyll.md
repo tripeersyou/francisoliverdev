@@ -3,8 +3,13 @@ layout: post
 title: Implementing Dark Mode to Your Jekyll Site
 date: 2019-07-08
 author: Francis Avanceña
-tags: jekyll, ruby, css, javascript
-cover_image:
+tags:
+- jekyll
+- ruby
+- css
+- javascript
+cover_image: 
+
 ---
 <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> is a static site generator powered by Ruby, that can use both HTML and Markdown for markup and Liquid as a template engine. It's the technology that powers this site! And with the prevalence in web development of now having both a light and a dark theme, we will implement having this functionality in Jekyll sites.
 
