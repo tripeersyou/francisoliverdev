@@ -7,9 +7,7 @@
  let light = new Audio('/assets/js/audio/light.m4a');
 
  function themeChange(){
-    Notification.requestPermission(function(status) {
-        console.log('Notification permission status:', status);
-    });
+    
     let theme = document.querySelector('.theme-icon');
 
     if(document.cookie.includes('data-theme')){

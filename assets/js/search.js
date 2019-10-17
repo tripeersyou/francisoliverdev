@@ -4,6 +4,13 @@ document.addEventListener('turbolinks:load', function () {
     let queryInput = document.querySelector('#query');
     queryInput.value = query;
 
+    queryInput.addEventListener('keypress',function(e){
+        if(e.keyCode === 13){
+            e.preventDefault();
+            window.location.href = `${window.location.origin}/search/?q=${queryInput.value}`;
+        }
+    })
+
     const getPosts = async () => {
         let includedPosts = [];
         let response = await fetch('/api/posts.json');

@@ -89,7 +89,10 @@ h1.title {
     display: inline !important;
     text-align: center;
 }
-
+.share-buttons, .share-buttons i {
+    color: white !important;
+    margin: 0px !important;
+}
 .buttons-container {
     text-align: center;
 }

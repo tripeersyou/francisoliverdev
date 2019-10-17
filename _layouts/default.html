@@ -3,7 +3,7 @@
 <head>
     <link rel='manifest' href='/manifest.webmanifest'>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144641660-1"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-144641660-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -18,8 +18,16 @@
     <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
     <title>{{page.title}} | {{ site.title }}</title>
     {% seo title=false%}
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="preload" as="style" href="https://use.fontawesome.com/releases/v5.4.0/css/all.css">
+    <link rel="preload" as="style" href="/assets/css/application.css">
+    <link rel="preload" as="style" href="/assets/css/syntax.css">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.0/css/all.css">
+    <link rel="stylesheet" href="/assets/css/application.css">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
     <script defer src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U=" crossorigin="anonymous"></script>
@@ -27,9 +35,6 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js" integrity="sha256-bQf05b7xzy7T5X1vhGqX1sgan7X3GMKftAbuPj0wRew=" crossorigin="anonymous"></script>
     <script defer src="/assets/js/shake.js"></script>
     <script defer src="/assets/js/application.js"></script>
-    <link rel="stylesheet" href="/assets/css/application.css">
-    <link rel="stylesheet" href="/assets/css/syntax.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
     <script>
         // This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
         // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
