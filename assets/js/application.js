@@ -1,12 +1,15 @@
  document.addEventListener('turbolinks:load',themeChange)
- 
+
  let shakeEvent = new Shake();
- shakeEvent.start(); 
+ shakeEvent.start();
 
  let dark = new Audio('/assets/js/audio/dark.m4a');
  let light = new Audio('/assets/js/audio/light.m4a');
 
  function themeChange(){
+    Notification.requestPermission(function(status) {
+        console.log('Notification permission status:', status);
+    });
     let theme = document.querySelector('.theme-icon');
 
     if(document.cookie.includes('data-theme')){
@@ -29,7 +32,7 @@
         }
     }
 
-   
+
 
     theme.addEventListener('click',function(e){
         if(document.documentElement.getAttribute('data-theme') === 'light'){
@@ -54,11 +57,11 @@
             });
         }
     });
-    
+
     const zooming = new Zooming({
         bgOpacity: 0.25
     });
-    
+
     zooming.listen('.blog-image');
  }
 
