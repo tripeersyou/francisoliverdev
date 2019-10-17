@@ -4,16 +4,20 @@ document.addEventListener('turbolinks:load',function () {
     notifyButton.addEventListener('click',function(e){
         e.preventDefault();
         if(Notification.permission === 'granted'){
-            new Notification("You have already enabled notifications!",{
-                body: "We'll keep you in loop for new blog posts!",
-                icon: '/assets/img/favicon.png'
+            navigator.serviceWorker.getRegistration().then(function(reg) {
+                reg.showNotification('You have already enabled notifications!',{
+                    body: "Stay tuned for new blog posts!",
+                    icon: '/assets/img/favicon.png'
+                });
             });
         } else {
             Notification.requestPermission(function(status) {
                 if(status === 'granted'){
-                    new Notification("You have enabled notifications!",{
-                        body: "We'll keep you in loop for new blog posts!",
-                        icon: '/assets/img/favicon.png'
+                    navigator.serviceWorker.getRegistration().then(function(reg) {
+                        reg.showNotification('Hello World!',{
+                            body: "You have enabled notifications. We'll keep you in the loop for new blog posts!",
+                            icon: '/assets/img/favicon.png'
+                        });
                     });
                     console.log(`Notification is granted`);
                 } else {
