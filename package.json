@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/tripeersyou/francisoliverdev/issues"
   },
-  "homepage": "https://github.com/tripeersyou/francisoliverdev#readme"
+  "homepage": "https://github.com/tripeersyou/francisoliverdev#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "faunadb": "^2.9.2"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^1.6.3"
+  }
 }
