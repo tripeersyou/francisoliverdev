@@ -3,10 +3,10 @@ const faunadb  = require('faunadb');
 const q = faunadb.query
 const client = new faunadb.Client({ secret: process.env.FAUNA_SECRET });
 
-exports.handler =  (event, context, callback)=>{
+exports.handler = (event, context, callback)=>{
     return client.query(q.Get(q.Match(q.Index("pushSubscriptions_by_id"), "1")))
     .then(response =>{
-        console.log(reponse)
+        console.log(response)
         return callback(null,{
             statusCode: 200,
             body: JSON.stringify(response.data)
