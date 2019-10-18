@@ -1,9 +1,13 @@
+---
+layout: null
+permalink: '/manifest.webmanifest'
+---
 {"dir" : "ltr",
     "lang" : "en",
     "name" : "Francis Oliver Avanceña",
     "scope" : "/",
     "display" : "standalone",
-    "start_url" : "https://francisoliver.dev/",
+    "start_url" : "{{site.url}}",
     "short_name" : "Francis Oliver ",
     "description" : "Hello! I am Francis and a Management Information Systems professional that currently works in the FinTech Industry in the Philippines.",
     "orientation" : "any",
@@ -13,11 +17,12 @@
     "generated" : "true",
     "icons" : [
         {
-            "src": "https://francisoliver.dev/assets/img/favicon.png",
+            "src": "{{site.url}}/assets/img/favicon.png",
             "sizes": "512x512"
         },
         {
-            "src": "https://francisoliver.dev/assets/img/favicon.png",
+            "src": "{{site.url}}/assets/img/favicon.png",
             "sizes": "192x192"
         }
-    ]}
+    ]
+}

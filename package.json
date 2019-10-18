@@ -4,7 +4,8 @@
   "description": "Personal website for Francis Oliver Avancena",
   "main": "notify.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "npm install && bundle install"
   },
   "repository": {
     "type": "git",

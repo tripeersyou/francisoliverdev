@@ -15,7 +15,7 @@ exports.handler = (event, context, callback)=>{
         console.log(error)
         return callback(null,{
             statusCode: 400,
-            body: JSON.stringify(error)
+            body: error.responseRaw
         });
     });;
 }

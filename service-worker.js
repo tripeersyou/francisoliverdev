@@ -1,11 +1,10 @@
-// This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
-
+---
+layout: null
+permalink: '/service-worker.js'
+---
 const CACHE = "pwabuilder-offline-page";
-
-// TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
 const offlineFallbackPage = "offline.html";
 
-// Install stage sets up the offline page in the cache and opens a new cache
 self.addEventListener("install", function (event) {
   console.log("Install Event processing");
 
@@ -22,7 +21,6 @@ self.addEventListener("install", function (event) {
   );
 });
 
-// If any fetch fails, it will look for the request in the cache and serve it from there first
 self.addEventListener("fetch", function (event) {
   if (event.request.method !== "GET") return;
 
@@ -30,10 +28,7 @@ self.addEventListener("fetch", function (event) {
     fetch(event.request)
       .then(function (response) {
         console.log("Add page to offline cache: " + response.url);
-
-        // If request was success, add or update it in the cache
         event.waitUntil(updateCache(event.request, response.clone()));
-
         return response;
       })
       .catch(function (error) {
@@ -43,21 +38,35 @@ self.addEventListener("fetch", function (event) {
   );
 });
 
+self.addEventListener('activate', async(event) => {
+     try {
+        const applicationServerKey = urlB64ToUint8Array('BBiLT8_nSOjIFMrFckPjH-YlmWSvrGIs4C54R-GFF4QAS9KA-siGb9HJb9G8nB3nVUQldfeadMfFvT5PI-u5EDw')
+        const options = { applicationServerKey, userVisibleOnly: true }
+        const subscription = await self.registration.pushManager.subscribe(options)
+        console.log(JSON.stringify(subscription))
+    } catch (err) {
+        console.log('Error', err)
+    }
+});
+
+
+self.addEventListener('push', function(event) {
+  if (event.data) {
+    console.log('Push event!! ', event.data.text())
+  } else {
+    console.log('Push event but no data')
+  }
+});
+
 function fromCache(request) {
-  // Check to see if you have it in the cache
-  // Return response
-  // If not in the cache, then return the offline page
   return caches.open(CACHE).then(function (cache) {
     return cache.match(request).then(function (matching) {
       if (!matching || matching.status === 404) {
-        // The following validates that the request was for a navigation to a new document
         if (request.destination !== "document" || request.mode !== "navigate") {
           return Promise.reject("no-match");
         }
-
         return cache.match(offlineFallbackPage);
       }
-
       return matching;
     });
   });
@@ -67,4 +76,18 @@ function updateCache(request, response) {
   return caches.open(CACHE).then(function (cache) {
     return cache.put(request, response);
   });
+}
+
+
+// urlB64ToUint8Array is a magic function that will encode the base64 public key
+// to Array buffer which is needed by the subscription option
+function urlB64ToUint8Array (base64String){
+  const padding = '='.repeat((4 - (base64String.length % 4)) % 4)
+  const base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/')
+  const rawData = atob(base64)
+  const outputArray = new Uint8Array(rawData.length)
+  for (let i = 0; i < rawData.length; ++i) {
+    outputArray[i] = rawData.charCodeAt(i)
+  }
+  return outputArray
 }
