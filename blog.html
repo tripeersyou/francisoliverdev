@@ -35,8 +35,8 @@ pagination:
   <div class="ui raised segment wow slideInLeft">
       {% if post.cover_image != nil %}
       <div class="ui stackable grid">
-        <div class="four wide column ">
-            <img class="ui rounded centered image" alt="{{post.title}}'s Cover Image" src="{{post.cover_image}}">
+        <div class="four wide column middle aligned content">
+            <img class="ui rounded centered image" load="lazy" alt="{{post.title}}'s Cover Image" src="{{post.cover_image}}">
         </div>
         <div class="twelve wide column">
             <h3 class="header">{{post.title}}</h3>

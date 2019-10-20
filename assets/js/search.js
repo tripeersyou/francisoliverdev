@@ -33,7 +33,7 @@ document.addEventListener('turbolinks:load', function () {
             html = `<div class="ui raised segment wow slideInLeft">`;
             if (post.cover_image != "") {
                 html += `<div class="ui stackable grid">
-                <div class="four wide column ">
+                <div class="four wide column middle aligned content">
                     <img class="ui rounded centered image" alt="${post.title}'s Cover Image" src="${post.cover_image}">
                 </div>
                 <div class="twelve wide column">

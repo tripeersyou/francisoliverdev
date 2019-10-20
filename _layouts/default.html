@@ -18,6 +18,11 @@
     <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
     <title>{{page.title}} | {{ site.title }}</title>
     {% seo title=false%}
+    {% if page.cover_image == "" or page.cover_image == nil %}
+        <meta property="og:image" content="/assets/img/favicon.png" />
+    {% else %}
+        <meta property="og:image" content="{{page.cover_image}}" />
+    {% endif %}
     <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link rel="preload" as="style" href="https://use.fontawesome.com/releases/v5.4.0/css/all.css">
     <link rel="preload" as="style" href="/assets/css/application.css">
@@ -36,14 +41,10 @@
     <script defer src="/assets/js/shake.js"></script>
     <script defer src="/assets/js/application.js"></script>
     <script>
-        // This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
-        // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
-        // Check compatibility for the browser we're running this in
         if ("serviceWorker" in navigator) {
             if (navigator.serviceWorker.controller) {
                 console.log("Active service worker found, no need to register");
             } else {
-                // Register the service worker
                 navigator.serviceWorker
                 .register("/service-worker.js", {
                     scope: "./"

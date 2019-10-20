@@ -4,8 +4,7 @@ title: 'Side Projects: Telegram Food Bot using the Zomato API'
 date: 2019-10-19
 author: Francis Avanceña
 tags: javascript, showdev, api, chatbot
-cover_image: 
-
+cover_image: https://thepracticaldev.s3.amazonaws.com/i/981olvxx09bby6r6qp00.png
 ---
 In work, we use Telegram as a main communication platform and being in a central business district, there are many food places to choose from that will end up in endless discussions on where to go out to eat for lunch outs and dinner catch-ups. When looking at fun APIs to use in a project I stumbled across Zomato’s API, so, as a side project, I decided to make a Telegram bot that narrows restaurant options and stop groups from being indecisive in choosing where to eat.
 
