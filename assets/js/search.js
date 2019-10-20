@@ -16,7 +16,6 @@ document.addEventListener('turbolinks:load', function () {
         let response = await fetch('/api/posts.json');
         let posts = await response.json();
         for (let post of posts) {
-            console.log(post.title.toLowerCase());
             if (post.title.toLowerCase().includes(query.toLowerCase()) || post.excerpt.toLowerCase().includes(query.toLowerCase())) {
                 includedPosts.push(post);
             }

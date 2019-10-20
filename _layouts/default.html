@@ -2,6 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
     <link rel='manifest' href='/manifest.webmanifest'>
+    {% if jekyll.environment == 'production' %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-144641660-1"></script>
     <script>
@@ -11,6 +12,7 @@
 
       gtag('config', 'UA-144641660-1');
     </script>
+    {% endif %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -27,7 +29,7 @@
     <link rel="preload" as="style" href="https://use.fontawesome.com/releases/v5.4.0/css/all.css">
     <link rel="preload" as="style" href="/assets/css/application.css">
     <link rel="preload" as="style" href="/assets/css/syntax.css">
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.0/css/all.css">
     <link rel="stylesheet" href="/assets/css/application.css">
@@ -40,6 +42,7 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js" integrity="sha256-bQf05b7xzy7T5X1vhGqX1sgan7X3GMKftAbuPj0wRew=" crossorigin="anonymous"></script>
     <script defer src="/assets/js/shake.js"></script>
     <script defer src="/assets/js/application.js"></script>
+    <script defer src="/assets/js/permissions.js"</script>
     <script>
         if ("serviceWorker" in navigator) {
             if (navigator.serviceWorker.controller) {
@@ -69,7 +72,9 @@
             {% include footer.html %}
         {% endif %}
         <script>
-            new WOW().init();
+            document.addEventListener('DOMContentLoaded', function () {
+                new WOW().init();                
+            });
         </script>
     </div>
 </body>
