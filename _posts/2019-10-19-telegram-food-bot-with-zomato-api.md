@@ -3,11 +3,7 @@ layout: post
 title: 'Side Projects: Telegram Food Bot using the Zomato API'
 date: 2019-10-19
 author: Francis Avanceña
-tags:
-- javascript
-- showdev
-- api
-- chatbot
+tags: javascript, showdev, api, chatbot
 cover_image: 
 
 ---

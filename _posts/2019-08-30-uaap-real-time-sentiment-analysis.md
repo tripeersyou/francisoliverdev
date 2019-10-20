@@ -3,11 +3,7 @@ layout: post
 title: UAAP Real Time Sentiment Analysis of Fan Tweets
 date: 2019-08-30
 author: Francis Avanceña
-tags:
-- twitter
-- javascript
-- datascience
-- datavisualization
+tags: twitter, javascript, datascience, datavisualization
 cover_image: 
 
 ---
