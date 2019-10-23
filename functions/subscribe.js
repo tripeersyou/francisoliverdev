@@ -1,23 +1,10 @@
 require('dotenv').config();
-const faunadb = require('faunadb');
-const q = faunadb.query
-const client = new faunadb.Client({ secret: process.env.FAUNA_SECRET });
+const mongojs  = require('mongojs');
+const db = mongojs(process.env.MONGO_URI, ['subscriptions']);
 
 exports.handler = (event, context, callback)=>{
-    return client.query(q.Create(q.Collection("pushSubscriptions"), { data: { id: "2"} }))
-    .then(response => {
-        console.log(response);
-        return callback(null, {
-            statusCode: 200,
-            body: JSON.stringify(response)
-        })
-    }).catch(error =>{
-        console.log(error)
-        return callback(null,{
-            statusCode: 400,
-            body: error.responseRaw
-        });
-    });;
+   return callback({
+       statusCode: 200,
+       body: event
+   })
 }
-
-// client.query(q.Create(q.Collection("pushSubscriptions"), { data: { id: "2"} })).then(response => console.log(response)).catch(err=>console.log(err));

@@ -40,7 +40,7 @@ self.addEventListener("fetch", function (event) {
 
 self.addEventListener('activate', async(event) => {
      try {
-        const applicationServerKey = urlB64ToUint8Array('BBiLT8_nSOjIFMrFckPjH-YlmWSvrGIs4C54R-GFF4QAS9KA-siGb9HJb9G8nB3nVUQldfeadMfFvT5PI-u5EDw')
+        const applicationServerKey = urlB64ToUint8Array('BPjGVdbUbREI11oDNCDb8MJL_xaJU5GLnYokNvctH35NCEXd6uzR_Ckgpq4th3sYI7U3vl7AtjsY9CAa4EZ3RHQ')
         const options = { applicationServerKey, userVisibleOnly: true }
         const subscription = await self.registration.pushManager.subscribe(options)
         console.log(JSON.stringify(subscription))

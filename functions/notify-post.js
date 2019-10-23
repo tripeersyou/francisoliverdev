@@ -1,23 +1,21 @@
 require('dotenv').config();
-const faunadb  = require('faunadb');
-const q = faunadb.query
-const client = new faunadb.Client({ secret: process.env.FAUNA_SECRET });
+const mongojs  = require('mongojs');
+const db = mongojs(process.env.MONGO_URI, ['subscriptions']);
 
 exports.handler = (event, context, callback)=>{
-    return client.query(q.Get(q.Match(q.Index("pushSubscriptions_by_id"), "1")))
-    .then(response =>{
-        console.log(response)
-        return callback(null,{
-            statusCode: 200,
-            body: JSON.stringify(response.data)
+    if(event.httpMethod === 'POST'){
+        return callback({
+            statusCode: 201,
+            body: {
+                message: `Subscription saved`
+            }
+        })
+    } else {
+        return callback({
+            statusCode: 405,
+            body: {
+                error: `Endpoint doesn't accept that request method`
+            }
         });
-    }).catch(error =>{
-        console.log(error)
-        return callback(null,{
-            statusCode: 400,
-            body: error.responseRaw
-        });
-    });
+    }
 }
-
-// client.query(q.Get(q.Match(q.Index("pushSubscriptions_by_id"), "1"))).then(res => console.log(res)).catch(err => console.log(err));

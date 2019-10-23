@@ -19,9 +19,7 @@
   "homepage": "https://github.com/tripeersyou/francisoliverdev#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "faunadb": "^2.9.2"
-  },
-  "devDependencies": {
+    "mongojs": "^3.0.0",
     "netlify-lambda": "^1.6.3"
   }
 }
