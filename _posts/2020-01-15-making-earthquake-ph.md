@@ -41,7 +41,7 @@ After this, we run the coordinates to a reverse Geocoder to give us an address o
 
 #### Earthquake Details
 
-The first feature is a general overview of the details regarding the earthquake. I included the general details from the tweet, a Google Map of the epicenter based on the longitude and latitude given and descriptions about how strong the earthquake was from [thiswebsite.](https://www.gns.cri.nz/Home/Learning/Science-Topics/Earthquakes/Monitoring-Earthquakes/Other-earthquake-questions/What-is-the-Richter-Magnitude-Scale)
+The first feature is a general overview of the details regarding the earthquake. I included the general details from the tweet, a Google Map of the epicenter based on the longitude and latitude given and descriptions about how strong the earthquake was from [this website.](https://www.gns.cri.nz/Home/Learning/Science-Topics/Earthquakes/Monitoring-Earthquakes/Other-earthquake-questions/What-is-the-Richter-Magnitude-Scale)
 
 <table class="ui very simple table">
     <tr>
