@@ -7,7 +7,7 @@ tags: javascript, twitter, maps
 cover_image: '/assets/img/blog/making-earthquake-ph/cover_image.png'
 ---
 
-The recent disaster in Batangas becuase of the Taal Volcano caused a spew of scientific terms and overflow of science communication to the public. It got me thinking on how do we inform the general public regarding these terms and especially during these times where many volcanic earthquakes occur.
+The recent disaster in Batangas becuase of the Taal Volcano caused a spew of scientific terms and overflow of science communication to the public. It got me thinking on how we inform the general public regarding these terms and especially during these times where many volcanic earthquakes occur.
 
 <blockquote class="twitter-tweet tw-align-center">
     <p lang="en" dir="ltr">Looks like <a href="https://twitter.com/phivolcs_dost?ref_src=twsrc%5Etfw">@phivolcs_dost</a>
