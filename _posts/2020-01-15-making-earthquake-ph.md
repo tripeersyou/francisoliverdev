@@ -4,10 +4,11 @@ title: 'Making Earthquake PH: Working with Tweets and Maps'
 date: 2020-01-15
 author: Francis Avanceña
 tags: javascript, twitter, maps
-cover_image:
+cover_image: '/assets/img/blog/making-earthquake-ph/cover_image.png'
 ---
 
-The recent disaster in Batangas at the Taal Volcano and the current spew of scientific terms and overall science communication to the
+The recent disaster in Batangas at the Taal Volcano and the current spew of scientific terms and overall science
+communication to the
 public got has got me thinking on how do we inform the general public regarding these terms especially during these
 times where many volcanic earthquakes occur.
 
@@ -31,7 +32,9 @@ about details about earthquakes making information understandable to the normal 
 
 ### How does Earthquake PH work?
 
-The site uses the Twitter API to scrape the most recent tweets from the PHIVOLCS account every ten minutes. From the recent tweets, we filter them to get tweets specifically regarding earthquake information. Next, we parsed the information from the full text of the Tweet to get the following information using Regular Expressions:
+The site uses the Twitter API to scrape the most recent tweets from the PHIVOLCS account every ten minutes. From the
+recent tweets, we filter them to get tweets specifically regarding earthquake information. Next, we parsed the
+information from the full text of the Tweet to get the following information using Regular Expressions:
 
 * Date and Time
 * Location
@@ -40,7 +43,8 @@ The site uses the Twitter API to scrape the most recent tweets from the PHIVOLCS
 * Strength or Magnitude
 * Depth of Focus
 
-After this, we run the coordinates to a reverse Geocoder to give us an address of where the epicenter of the earthquake is and then save it to our MongoDB database.
+After this, we run the coordinates to a reverse Geocoder to give us an address of where the epicenter of the earthquake
+is and then save it to our MongoDB database.
 
 #### Features of Earthquake PH
 
@@ -142,28 +146,38 @@ website.](https://www.gns.cri.nz/Home/Learning/Science-Topics/Earthquakes/Monito
 </table>
 
 <div class="ui medium images" style="text-align:center;">
-  <img class="ui image blog-image" src="/assets/img/blog/making-earthquake-ph/homescreen.jpg" alt="Home Screen">
-  <img class="ui image blog-image" src="/assets/img/blog/making-earthquake-ph/detail-1.jpg" alt="Detail Page Part 1">
-  <img class="ui image blog-image" src="/assets/img/blog/making-earthquake-ph/detail-2.jpg" alt="Detail Page Part 2">
+    <img class="ui image blog-image" src="/assets/img/blog/making-earthquake-ph/homescreen.jpg" alt="Home Screen">
+    <img class="ui image blog-image" src="/assets/img/blog/making-earthquake-ph/detail-1.jpg" alt="Detail Page Part 1">
+    <img class="ui image blog-image" src="/assets/img/blog/making-earthquake-ph/detail-2.jpg" alt="Detail Page Part 2">
 </div>
 
 #### Quake Map
 
-I decided to add another feature which is called the *Quake Map* the Quake Map visualizes on the screen where the 10 latest earthquakes are, how strong they were and when and where exactly they took place.
+I decided to add another feature which is called the *Quake Map* the Quake Map visualizes on the screen where the 10
+latest earthquakes are, how strong they were and when and where exactly they took place.
 
 <div class="ui medium images" style="text-align:center;">
-<img class="ui image blog-image" src="/assets/img/blog/making-earthquake-ph/quake-map.jpg" alt="Quake Map Page">
+    <img class="ui image blog-image" src="/assets/img/blog/making-earthquake-ph/quake-map.jpg" alt="Quake Map Page">
 </div>
 
 ### Technology Used
 
-Now for the technical details, the website is a monolith Express.js application, a MongoDB database from MongoDB Atlas, Several Map and Geocoding APIs and of course Twitter's Developer API.
+Now for the technical details, the website is a monolith Express.js application, a MongoDB database from MongoDB Atlas,
+Several Map and Geocoding APIs and of course Twitter's Developer API.
 
-In the detail pages of the earthquakes, I used Google's Map Embed API to visualize the location of the earthquake. On the other hand, I used Leaflet and OpenStreetMaps for the Quake Map since it's open-source and free unlike Google's API for multiple markers. Leaflet can also be used for more features down the line.
+In the detail pages of the earthquakes, I used Google's Map Embed API to visualize the location of the earthquake. On
+the other hand, I used Leaflet and OpenStreetMaps for the Quake Map since it's open-source and free unlike Google's API
+for multiple markers. Leaflet can also be used for more features down the line.
 
-On updating the data on the site, I just do this by having a Node.js script that runs every 10 minutes and on this file, using the Twitter API, I get the 100 most recent tweets of PHIVOLCS not including RTs then get the information through RegEx, then I check the database if the Tweet ID is already included in the database if it's not I used LocationIQ's Reverse Geocoding API to get an address of where the earthquake occurred. Then insert it to the database.
+On updating the data on the site, I just do this by having a Node.js script that runs every 10 minutes and on this file,
+using the Twitter API, I get the 100 most recent tweets of PHIVOLCS not including RTs then get the information through
+RegEx, then I check the database if the Tweet ID is already included in the database if it's not I used LocationIQ's
+Reverse Geocoding API to get an address of where the earthquake occurred. Then insert it to the database.
 
 
 ### Using the site.
 
-You can visit the site by going to [**https://earthquakeph.francisoliver.dev/**](https://earthquakeph.francisoliver.dev/) or by clicking [here.](https://earthquakeph.francisoliver.dev/) The site currently has more than 120 recorded earthquakes and counting. Feel free to suggest new features to the website and how I can improve it.
+You can visit the site by going to
+[**https://earthquakeph.francisoliver.dev/**](https://earthquakeph.francisoliver.dev/) or by clicking
+[here.](https://earthquakeph.francisoliver.dev/) The site currently has more than 120 recorded earthquakes and counting.
+Feel free to suggest new features to the website and how I can improve it.
