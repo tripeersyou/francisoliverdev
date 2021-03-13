@@ -21,9 +21,9 @@ I will rank them based on my enjoyment of the albums and provide a short explana
   7. folklore by Taylor Swift
   8. Chilombo by Jhene Aiko
 
-Out of all the albums in the nominees this list Black Pumas' album is the one I enjoyed the most. This pick might be a bit biased because I prefer music performed on instruments but the beat and the feel of the Black Pumas (Deluxe) is superb. I never really got into the eligibility of the Black Pumas album some people say it's not supposed to be on here because it was not technically released during the period of eligibility but I do not care about that I'm just here for the music. 
+Out of all the albums in the nominees this list Black Pumas' album is the one I enjoyed the most. This pick might be a bit biased because I prefer music performed on instruments but the beat and the feel of the Black Pumas (Deluxe) is superb. I never really got into the eligibility of the Black Pumas album some people say it's not supposed to be on here because it was not technically released during the period of eligibility but I do not care about that I'm just here for the music.
 
-Few notes on the other nominees, Everyday Life by Coldplay maybe cheesy for some listeners but it's maybe one of their most inspired works. Jacob Collier's Djesse Vol. 3 is what you expect from him crazy harmonies and complex music theory, but for me it gets kind of old, like he's saying "look at this music theory gimmick we used for this song". The others are just well produced pop albums or albums with good writing but never really gets going and keeps on playing the same sounding song over and over again. 
+Few notes on the other nominees, Everyday Life by Coldplay maybe cheesy for some listeners but it's maybe one of their most inspired works. Jacob Collier's Djesse Vol. 3 is what you expect from him crazy harmonies and complex music theory, but for me it gets kind of old, like he's saying "look at this music theory gimmick we used for this song". The others are just well produced pop albums or albums with good writing but never really gets going and keeps on playing the same sounding song over and over again.
 
 * Record of the Year
   1. **Colors by Black Pumas**
@@ -37,7 +37,7 @@ Few notes on the other nominees, Everyday Life by Coldplay maybe cheesy for some
 
 Colors by Black Pumas is my most enjoyed record out of all the nominees this year. This songs elements, the guitars, the bass, the keys, the vocals and drums are recorded and it feels like its a live performance and it doesn't sound like it comes from a laptop.
 
-Don't Start Now, Say So and Savage (Remix) had a gigantic 2020 year. In terms of the recording aspect of this category, Don't Start Now has this killer baseline that propels not just this song but the entirety of Dua Lipa's sophomore release. Say So by Doja Cat is propelled  by the vocals and the masterful use of post production effects on it (especially on the chorus). Savage (Remix) may be least enjoyed  song but the chords and rhythm is very unique (I might just be the case of being overplayed thanks to TikTok). 
+Don't Start Now, Say So and Savage (Remix) had a gigantic 2020 year. In terms of the recording aspect of this category, Don't Start Now has this killer baseline that propels not just this song but the entirety of Dua Lipa's sophomore release. Say So by Doja Cat is propelled  by the vocals and the masterful use of post production effects on it (especially on the chorus). Savage (Remix) may be least enjoyed  song but the chords and rhythm is very unique (I might just be the case of being overplayed thanks to TikTok).
 
 * Song of the Year
   1. **everything i wanted by Billie Eilish**
@@ -77,3 +77,5 @@ Exile wins this category by a lot. Combine Taylor's superb lyric writing and hav
   5. Changes by Justin Bieber
 
 Harry Styles' album is a surprise during my listen, it wasn't only just catchy but musically interesting as well. Songs like Golden, She and Falling are in my opinion the best on the record. It seems musically similar to Carly Rae Jepsen's works but the type of music and vibe is totally different. Future Nostalgia and folklore has this problem of all the songs sounding the same, the former just being one disco track after another and your ears are tired of hearing the same tropes after 4 songs, and the latter has the opposite problems Taylor's folk songs never get into another gear like she's stuck on a tempo and style of folk music. Chromatica is Gaga's return to form after Joanne, this release was hampered by the COVID pandemic not having live shows really hampered this album, also Gaga goes full camp on some of the tracks on this record where its almost laughable (i.e. "Unwrap Me" from Sour Candy) but there are good tracks on there like Enigma which shows Gaga's powerful vocals and Babylon and the wordplay in that song (Babble On, Babylon).
+
+In all honesty, I am more excited with the performances this year. Espeically from Silk Sonic (Bruno Mars and Anderson .Paak) and others. Let's take the awards with a grain of salt especially with The Weeknd's boycott of the Recording Academy and just enjoy the industry's so called "Biggest Night".
