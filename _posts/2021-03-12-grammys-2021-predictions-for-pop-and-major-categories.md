@@ -62,7 +62,7 @@ This category is really a two horse race between Billie Eilish and Taylor Swift 
 5. Say So by Doja Cat
 6. Yummy by Justin Bieber
 
-Billie wins this category again based on the reasons laid out on the Song of the Year category of this, but I can see any song on this category winning this category except for Yummy that song shouldn't even be considered for any award but it's here. 🤷‍♂️
+Billie wins this category again based on the reasons laid out on the Song of the Year category of this article, but I can see any song on this category winning this category except for Yummy, that song shouldn't even be considered for any award but it's here. 🤷‍♂️
 
 ### Best Pop/Duo Solo Performance
 
@@ -72,7 +72,7 @@ Billie wins this category again based on the reasons laid out on the Song of the
 4. Intentions by Justin Bieber feat. Quavo
 5. Un Dia (One Day) by J Balvin, Dua Lipa, Bad Bunny & Tainy
 
-Exile wins this category by a lot. Combine Taylor's superb lyric writing and having Bon Iver for her to have a sort of dialogue in the song totally elevates the song. Dynamite by BTS is just a catchy song with a hook in the chorus but really has no main point but to have it engrained in your ears for BTS to have a more international audience. Intentions by Justin Bieber is just badly written, its bad when Quavo says "asset" like "skkrt" because you have no interesting words in that line except for "asset".
+Exile wins this category by a lot. Combine Taylor's superb lyric writing and having Bon Iver for her to have a sort of dialogue in the song totally elevates it. Dynamite by BTS is just a catchy song with a hook in the chorus but really has no main point but to have it engrained in your ears for BTS to have a more international audience. Intentions by Justin Bieber is just badly written, its bad when Quavo says "asset" like "skkrt" because you have no interesting words in that line except for "asset".
 
 ### Best Pop Vocal Album
 
@@ -82,6 +82,6 @@ Exile wins this category by a lot. Combine Taylor's superb lyric writing and hav
 4. Chromatica by Lady Gaga
 5. Changes by Justin Bieber
 
-Harry Styles' album is a surprise during my listen, it wasn't only just catchy but musically interesting as well. Songs like Golden, She and Falling are in my opinion the best on the record. It seems musically similar to Carly Rae Jepsen's works but the type of music and vibe is totally different. Future Nostalgia and folklore has this problem of all the songs sounding the same, the former just being one disco track after another and your ears are tired of hearing the same tropes after 4 songs, and the latter has the opposite problems Taylor's folk songs never get into another gear like she's stuck on a tempo and style of folk music. Chromatica is Gaga's return to form after Joanne, this release was hampered by the COVID pandemic not having live shows really hampered this album, also Gaga goes full camp on some of the tracks on this record where its almost laughable (i.e. "Unwrap Me" from Sour Candy) but there are good tracks on there like Enigma which shows Gaga's powerful vocals and Babylon and the wordplay in that song (Babble On, Babylon).
+Harry Styles' album is a surprise during my listen, it wasn't only just catchy but musically interesting as well. Songs like "Golden", "She", and "Falling" are in my opinion the best on the record. It seems musically similar to Carly Rae Jepsen's recent works but the type of music and vibe is totally different. Future Nostalgia and folklore has this problem of all the songs sounding the same, the former just being one disco track after another and your ears are tired of hearing the same tropes after 4 songs, and the latter has the opposite problems Taylor's folk songs never get into another gear like she's stuck on a tempo and style of folk music. Chromatica is Gaga's return to form after Joanne. This release was hampered by the COVID pandemic not having live shows, and people being stuck at home this year this wasn't the album that the people needed, so it really hampered this album. Gaga goes full camp on some of the tracks on this record where its almost laughable (i.e. "Unwrap Me" line from Sour Candy) but there are good tracks on there like Enigma which shows Gaga's powerful vocals and Babylon and the wordplay in that song (Babble On, Babylon).
 
-In all honesty, I am more excited with the performances this year. Espeically from Silk Sonic (Bruno Mars and Anderson .Paak) and others. Let's take the awards with a grain of salt especially with The Weeknd's boycott of the Recording Academy following the snub of his recent project "After Hours", and just enjoy the industry's so called "Biggest Night".
+In all honesty, I am more excited with the performances this year. Especially from Silk Sonic (Bruno Mars and Anderson .Paak) and others. Let's take the awards with a grain of salt especially with The Weeknd's boycott of the Recording Academy following the snub of his recent project "After Hours", and just enjoy the industry's so called "Biggest Night".
