@@ -32,3 +32,5 @@ fields:
 - type: text
   name: cover_image
   label: Cover Image
+pages:
+- _posts/grammys-2021-predictions-for-pop-and-major-categories.md
