@@ -37,9 +37,9 @@ Few notes on the other nominees, Everyday Life by Coldplay maybe cheesy for some
 7. Rockstar by DaBabby feat. Roddy Rich
 8. Savage (Remix) by Megan Thee Stallion feat. Beyonce
 
-Colors by Black Pumas is my most enjoyed record out of all the nominees this year. This songs elements, the guitars, the bass, the keys, the vocals and drums are recorded and it feels like its a live performance and it doesn't sound like it comes from a laptop.
+Colors by Black Pumas is my most enjoyed record out of all the nominees this year. This songs' elements, the guitars, the bass, the keys, the vocals and drums are recorded and it feels like its a live performance and it doesn't sound like it comes from a laptop.
 
-Don't Start Now, Say So and Savage (Remix) had a gigantic 2020 year. In terms of the recording aspect of this category, Don't Start Now has this killer baseline that propels not just this song but the entirety of Dua Lipa's sophomore release. Say So by Doja Cat is propelled  by the vocals and the masterful use of post production effects on it (especially on the chorus). Savage (Remix) may be least enjoyed  song but the chords and rhythm is very unique (I might just be the case of being overplayed thanks to TikTok).
+Don't Start Now, Say So and Savage (Remix) had a gigantic 2020 year. In terms of the recording aspect of this category, Don't Start Now has this killer baseline that propels not just this song but the entirety of Dua Lipa's sophomore release. Say So by Doja Cat is propelled  by the vocals and the masterful use of post production effects on it (especially on the chorus). Savage (Remix) may be least enjoyed song but the chords and rhythm is very unique (Might just be because of being overplayed, Thanks to TikTok).
 
 ### Song of the Year
 
