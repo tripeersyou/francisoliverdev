@@ -4,7 +4,7 @@ date: 2021-03-12 16:00:00 +0000
 author: Francis Avanceña
 title: 'GRAMMYs 2021: Predictions for Pop and Major Categories'
 tags: music, grammys, pop
-cover_image: ''
+cover_image: "/assets/img/blog/2021-grammy-predictions.png"
 
 ---
 Since the 2021 GRAMMY nominations came out last year in 2020, I wanted to try something new. In the past few years I would look at the nominations and forget about it and would have like a few albums that I know, but this year I wanted to listen to all major categories and the few song nominations especially in pop music. So, with this year's GRAMMYs coming up. I would like to share my predications and nominations for the following categories: Album of the Year, Record of the Year, Song of the Year, Best Pop Solo Performance, Best Pop/Duo Solo Performance, and Best Pop Vocal Album
