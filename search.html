@@ -3,7 +3,8 @@ title: Search Results
 layout: page
 permalink: '/search/'
 ---
-<script src="/assets/js/search.js"></script>
+<script defer src="/assets/js/search.js"></script>
+<!-- <script defer src="/assets/js/permissions.js"></script> -->
 <div class="ui stackable grid">
     <div class="twelve wide column">
         <div class="ui breadcrumb">
@@ -15,10 +16,14 @@ permalink: '/search/'
         </div>
     </div>
     <div class="four wide column">
-        <form action="/search" class="ui form" method="get">
-            <div class="ui icon input">
+        <form action="/search" class="ui inline form" method="get">
+            <div class="inline fields">
+                <div class="ui icon input">
                 <input type="text" id="query" name="q" placeholder="Search the blog">
                 <i class="search icon"></i>
+                </div>
+                &nbsp;
+                <button class="ui basic icon button" id="notify-me"><i class="fa fa-bell"></i></button>
             </div>
         </form>
     </div>

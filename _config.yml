@@ -36,6 +36,8 @@ social:
     - https://dev.to/sicnarf_revilo
     - https://instagram.com/francis.avancena
 # Build settings
+future: false
+lsi: true
 pagination:
   enabled: true
   per_page: 5
@@ -48,7 +50,7 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-seo-tag
   - jekyll-sitemap
-    
+
 include:
   - _redirects
   - search.xml

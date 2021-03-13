@@ -4,13 +4,19 @@ document.addEventListener('turbolinks:load', function () {
     let queryInput = document.querySelector('#query');
     queryInput.value = query;
 
+    queryInput.addEventListener('keypress',function(e){
+        if(e.keyCode === 13){
+            e.preventDefault();
+            window.location.href = `${window.location.origin}/search/?q=${queryInput.value}`;
+        }
+    })
+
     const getPosts = async () => {
         let includedPosts = [];
         let response = await fetch('/api/posts.json');
         let posts = await response.json();
         for (let post of posts) {
-            console.log(post.title.toLowerCase());
-            if (post.title.toLowerCase().includes(query.toLowerCase())) {
+            if (post.title.toLowerCase().includes(query.toLowerCase()) || post.excerpt.toLowerCase().includes(query.toLowerCase())) {
                 includedPosts.push(post);
             }
         }
@@ -26,13 +32,13 @@ document.addEventListener('turbolinks:load', function () {
             html = `<div class="ui raised segment wow slideInLeft">`;
             if (post.cover_image != "") {
                 html += `<div class="ui stackable grid">
-                <div class="four wide column ">
+                <div class="four wide column middle aligned content">
                     <img class="ui rounded centered image" alt="${post.title}'s Cover Image" src="${post.cover_image}">
                 </div>
                 <div class="twelve wide column">
                     <h3 class="header">${post.title}</h3>
                     <div class="meta">
-                        <strong>Date:</strong> ${post.date}
+                        <strong>Date:</strong> ${post.date} | <strong>Read Time:</strong> ${post.read_time} min.
                     </div>
                     <br>
                     <div class="description">
@@ -63,7 +69,11 @@ document.addEventListener('turbolinks:load', function () {
             } else {
                 html += `<h3 class="header">${post.title}</h3>
                 <div class="meta">
+<<<<<<< HEAD
                     <strong>Date:</strong> ${post.date}
+=======
+                    <strong>Date:</strong> ${post.date} | <strong>Read Time:</strong> ${post.read_time} min.
+>>>>>>> 2c1f5a2aa050f47542c2336ff8b4ff5b40d6b22c
                 </div>
                 <br>
                 <div class="description">

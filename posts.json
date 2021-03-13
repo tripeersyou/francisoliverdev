@@ -5,12 +5,17 @@ permalink: '/api/posts'
 [
     {% for post in site.posts %}
       {
+        "id": "{{ post.url | absolute_url | sha1 }}",
         "title"    : "{{ post.title | escape }}",
-        "tags"     : "{{ post.tags }}",
+        "tags"     : {{ post.tags | jsonify }},
         "url"      : "{{ site.url }}{{ post.url }}",
         "date"     : "{{ post.date | date_to_string }}",
-        "excerpt"  : "{{ post.excerpt | escape | strip}}",
+        "read_time": {{ post.content | reading_time}},
+        "excerpt"  : "{{ post.excerpt | escape | strip }}",
         "cover_image": "{{post.cover_image}}"
       }
+      {% if forloop.last == false %}
+      ,
+      {% endif %}
     {% endfor %}
   ]

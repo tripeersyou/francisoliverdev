@@ -5,7 +5,8 @@ permalink: '/blog/'
 pagination:
   enabled: true
 ---
-
+<script defer src="/assets/js/search.js"></script>
+<!-- <script defer src="/assets/js/permissions.js"></script> -->
 <div class="ui stackable grid">
   <div class="twelve wide column">
     <div class="ui breadcrumb">
@@ -15,10 +16,14 @@ pagination:
     </div>      
   </div>
   <div class="four wide column">
-    <form action="/search" class="ui form" method="get">
-      <div class="ui icon input">
-        <input type="text" id="query" name="q" placeholder="Search the blog">
-        <i class="search icon"></i>
+    <form action="/search" class="ui inline form" method="get">
+      <div class="inline fields">
+        <div class="ui icon input">
+          <input type="text" id="query" name="q" placeholder="Search the blog">
+          <i class="search icon"></i>
+        </div>
+        &nbsp;
+        <button class="ui basic icon button" id="notify-me"><i class="fa fa-bell"></i></button>
       </div>
     </form>
   </div>
@@ -26,17 +31,17 @@ pagination:
 
 <h1 class="post-title wow fadeInDown">Blog Commits</h1>
 <p class="subtitle wow fadeInDown">Blog posts regarding my life in tech, work and personal wins in life.</p>
-{% for post in paginator.posts %}
+{% for post in paginator.posts reversed %}
   <div class="ui raised segment wow slideInLeft">
       {% if post.cover_image != nil %}
       <div class="ui stackable grid">
-        <div class="four wide column ">
-            <img class="ui rounded centered image" alt="{{post.title}}'s Cover Image" src="{{post.cover_image}}">
+        <div class="four wide column middle aligned content">
+            <img class="ui rounded centered image" load="lazy" alt="{{post.title}}'s Cover Image" src="{{post.cover_image}}">
         </div>
         <div class="twelve wide column">
             <h3 class="header">{{post.title}}</h3>
             <div class="meta">
-                <strong>Date:</strong> {{post.date | date_to_string}}
+                <strong>Date:</strong> {{post.date | date_to_string}} | {{ post.content | reading_time }} minute read.
             </div>
             <div class="description">
                 <p>{{post.excerpt}}</p>
@@ -49,7 +54,7 @@ pagination:
       {% else %}
       <h3 class="header">{{post.title}}</h3>
       <div class="meta">
-          <strong>Date:</strong> {{post.date | date_to_string}}
+          <strong>Date:</strong> {{post.date | date_to_string}} | {{ post.content | reading_time }} minute read.
       </div>
       <div class="description">
           <p>{{post.excerpt}}</p>

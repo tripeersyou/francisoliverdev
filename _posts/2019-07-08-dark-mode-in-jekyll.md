@@ -4,14 +4,14 @@ title: Implementing Dark Mode to Your Jekyll Site
 date: 2019-07-08
 author: Francis Avanceña
 tags: jekyll, ruby, css, javascript
-cover_image:
+cover_image: 
 
 ---
-<a href="https://jekyllrb.com" target="_blank">Jekyll</a> is a static site generator powered by Ruby, that can use both HTML and Markdown for markup and Liquid as a template engine. It's the technology that powers this site! And with the prevalence in web development of now having both a light and a dark theme, we will implement having this functionality in Jekyll sites.
+<a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> is a static site generator powered by Ruby, that can use both HTML and Markdown for markup and Liquid as a template engine. It's the technology that powers this site! And with the prevalence in web development of now having both a light and a dark theme, we will implement having this functionality in Jekyll sites.
 
 Using native CSS variables and JavaScript we are going to implement a full blown toggled dark mode or dark theme in our Jekyll websites. First we must first define our CSS variables for our light theme. In CSS we define a variable by having two dashes prefixing the variable name like in the code example below.
 
-```css 
+```css
 html {
     --bg: #fff;
     --bg-secondary: #fcfcfc;
@@ -22,7 +22,7 @@ html {
 
 We can see that we have four CSS variables namely `--bg`, `--bg-secondary`, `--headings` and `--text`. Once we have all our CSS variables set up for the light theme we create another set for the dark theme retaining the variable names but appending it to the `html` element with the `data-theme='dark'` attribute like in the code below:
 
-```css 
+```css
 html[data-theme='dark'] {
     --bg: #333;
     --bg-secondary: #444;
@@ -33,7 +33,7 @@ html[data-theme='dark'] {
 
 With those two steps out of the way we need only need to assign the CSS variables to the different HTML components.
 
-```css 
+```css
 
 body {
     background-color: var(--bg);
@@ -54,7 +54,7 @@ p, strong, b, em, span, code, small {
 
 Now in your **main HTML layout file** to check whether your dark mode works add the attribute `data-theme='dark'` to the `html` element.
 
-```html 
+```html
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
@@ -71,15 +71,15 @@ Now in your **main HTML layout file** to check whether your dark mode works add 
 </html>
 ```
 
-For now we leave the site in it's light mode set the `data-theme` attribute back to `light`. Now we must create a button to toggle between both modes and it give the class `theme-toggle` to be able to select it using JavaScript.
+For now we leave the site in its light mode set the `data-theme` attribute back to `light`. Now we must create a button to toggle between both modes and it give the class `theme-toggle` to be able to select it using JavaScript.
 
-```html 
+```html
 <button class="theme-toggle">Toggle Dark Mode</button>
 ```
 
 We will next write the JavaScript for the desired behavior of when clicking the button it must toggle between our two themes using native JavaScript we write.
 
-```js 
+```js
 document.addEventListener('DOMContentLoaded', themeChange);
 
 function themeChange(){
@@ -111,7 +111,7 @@ function themeChange(){
 
 Going back to our CSS file to add the CSS transition we add the following code below at the end of your CSS file.
 
-```css 
+```css
 html.transition,
 html.transition *,
 html.transition *:before,
@@ -121,13 +121,13 @@ html.transition *:after {
 }
 ```
 
-If you are using a single page application like React.js, Angular or Vue. This implementation works fine as you navigate the web app but for Jekyll in which the files are built into the `_sites` folder and technically has multiple HTML pages and files when deployed, the dark mode is immediately lost when we move from one HTML file to another. To remedy this we go to one special library known to Ruby Developers: [**turbolinks.js**](https://github.com/turbolinks/turbolinks). Known for being shipped with the Ruby on Rails Framework it's main implementation and the fundamentals of how turbolinks works is the solution on retaining the dark theme while navigating through our Jekyll site.
+If you are using a single page application like React.js, Angular or Vue. This implementation works fine as you navigate the web app but for Jekyll in which the files are built into the `_sites` folder and technically has multiple HTML pages and files when deployed, the dark mode is immediately lost when we move from one HTML file to another. To remedy this we go to one special library known to Ruby Developers: [**turbolinks.js**](https://github.com/turbolinks/turbolinks). Known for being shipped with the Ruby on Rails Framework its main implementation and the fundamentals of how turbolinks works is the solution on retaining the dark theme while navigating through our Jekyll site.
 
 Turbolinks works by intercepting anchor tags or the `<a>` tags in your site and instead of doing the regular `GET` request for it, turbolinks intercepts the request and makes an `XMLHttpRequest` or more commonly known as an `AJAX` request instead and only replacing the contents of the `<body>` tag. So in technically it makes our Jekyll site like a single page application in a sense.
 
 We only need to add the turbolinks.js library via CDN or locally through `npm` and add it to our header in the default HTML layout.
 
-```html 
+```html
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
