@@ -22,9 +22,9 @@ I will rank them based on my enjoyment of the albums and provide a short explana
 7. folklore by Taylor Swift
 8. Chilombo by Jhene Aiko
 
-Out of all the albums in the nominees this list Black Pumas' album is the one I enjoyed the most. This pick might be a bit biased because I prefer music performed on instruments but the beat and the feel of the Black Pumas (Deluxe) is superb. I never really got into the eligibility of the Black Pumas album some people say it's not supposed to be on here because it was not technically released during the period of eligibility but I do not care about that I'm just here for the music.
+Out of all the albums in the nominees this list Black Pumas' album is the one I enjoyed the most. This pick might be a bit biased because I prefer music performed on instruments but the beat and the feel of the Black Pumas (Deluxe) is superb. I never really got into the eligibility of the Black Pumas album, some people say it's not supposed to be on here because it was not technically released during the period of eligibility but I do not care about that I'm just here for the music.
 
-Few notes on the other nominees, Everyday Life by Coldplay maybe cheesy for some listeners but it's maybe one of their most inspired works. Jacob Collier's Djesse Vol. 3 is what you expect from him crazy harmonies and complex music theory, but for me it gets kind of old, like he's saying "look at this music theory gimmick we used for this song". The others are just well produced pop albums or albums with good writing but never really gets going and keeps on playing the same sounding song over and over again.
+Few notes on the other nominees, Everyday Life by Coldplay maybe cheesy for some listeners but it's maybe one of their most inspired works. Jacob Collier's Djesse Vol. 3 is what you expect from him: crazy harmonies and complex music theory, but for me it gets kind of old, like he's saying "look at this music theory gimmick we used for this song". The others are just well produced pop albums or albums with good writing but never really gets going and keeps on playing the same sounding song over and over again.
 
 ### Record of the Year
 
