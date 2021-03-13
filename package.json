@@ -1,0 +1,25 @@
+{
+  "name": "francisoliverdev",
+  "version": "1.0.0",
+  "description": "Personal website for Francis Oliver Avancena",
+  "main": "notify.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "npm install && bundle install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tripeersyou/francisoliverdev.git"
+  },
+  "author": "Francis Avancena",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tripeersyou/francisoliverdev/issues"
+  },
+  "homepage": "https://github.com/tripeersyou/francisoliverdev#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mongojs": "^3.0.0",
+    "netlify-lambda": "^1.6.3"
+  }
+}
