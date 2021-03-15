@@ -19,7 +19,7 @@ I will rank them based on my enjoyment of the albums/song and provide a short ex
 4. Hollywood's Bleeding by Post Malone
 5. Future Nostalgia by Dua Lipa
 6. Djesse Vol. 3 by Jacob Collier
-7. folklore by Taylor Swift
+7. _folklore by Taylor Swift — Actual Winner_
 8. Chilombo by Jhene Aiko
 
 Out of all the albums in the nominees, this list Black Pumas's album is the one I enjoyed the most. This pick might be a bit biased because I prefer music performed on instruments but the beat and the feel of the Black Pumas (Deluxe) is superb. I never really got into the eligibility of the Black Pumas album, some people say it's not supposed to be on here because it was not released during the period of eligibility but I do not care about that, I'm just here for the music.
@@ -29,7 +29,7 @@ Few notes on the other nominees, Everyday Life by Coldplay may be cheesy for som
 ### Record of the Year
 
 1. **Colors by Black Pumas — Predicted Winner**
-2. everything i wanted by Billie Eilish
+2. _everything i wanted by Billie Eilish  — Actual Winner_
 3. Don't Start Now by Dua Lipa
 4. Say So by Doja Cat
 5. Circles by Post Malone
@@ -47,7 +47,7 @@ Few notes on the other nominees, Everyday Life by Coldplay may be cheesy for som
 2. cardigan by Taylor Swift
 3. Don't Start Now by Dua Lipa
 4. If The World Was Ending by JP Saxe feat. Julia Michaels
-5. I Can't Breathe by H.E.R.
+5. _I Can't Breathe by H.E.R.  — Actual Winner_
 6. Black Parade by Beyonce
 7. The Box by Roddy Rich
 
@@ -57,7 +57,7 @@ This category is a two-horse race between Billie Eilish and Taylor Swift, if we 
 
 1. **everything i wanted by Billie Eilish — Predicted Winner**
 2. cardigan by Taylor Swift
-3. Watermelon Sugar by Harry Styles
+3. _Watermelon Sugar by Harry Styles — Actual Winner_
 4. Don't Start Now by Dua Lipa
 5. Say So by Doja Cat
 6. Yummy by Justin Bieber
@@ -68,7 +68,7 @@ Billie wins this category again based on the reasons laid out in the Song of the
 
 1. **exile by Tayor Swift feat. Bon Iver — Predicted Winner**
 2. Dynamite by BTS
-3. Rain On Me by Lady Gaga feat. Ariana Grande
+3. _Rain On Me by Lady Gaga feat. Ariana Grande  — Actual Winner_
 4. Intentions by Justin Bieber feat. Quavo
 5. Un Dia (One Day) by J Balvin, Dua Lipa, Bad Bunny & Tainy
 
@@ -77,7 +77,7 @@ Billie wins this category again based on the reasons laid out in the Song of the
 ### Best Pop Vocal Album
 
 1. **Fine Line by Harry Styles — Predicted Winner**
-2. Future Nostalgia by Dua Lipa
+2. _Future Nostalgia by Dua Lipa  — Actual Winner_
 3. folklore by Taylor Swift
 4. Chromatica by Lady Gaga
 5. Changes by Justin Bieber
